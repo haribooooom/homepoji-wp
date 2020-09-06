@@ -2,9 +2,8 @@
 
 <main id="main" role="main">
 
-  <section class="main-inner">
+  <section class="main__inner">
 
-    <div class="container-outer">
 
       <div class="container">
 
@@ -13,6 +12,7 @@
           <div class="content__inner">
 
             <div class="error-messages" style="text-align:center;">
+
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/00.jpg" width="1500" height="600" alt="" class="largeheader">
 
               <p><?php esc_html_e( 'このページは存在していないようです。' ); ?></p>
@@ -28,8 +28,7 @@
 
       </div>
       <!--/.container-->
-    </div>
-    <!--/.container-outer-->
+
 
   </section>
 

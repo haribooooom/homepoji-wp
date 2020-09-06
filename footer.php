@@ -7,7 +7,7 @@
     <!--f-logo-->
     <ul class="f-nav pc__flex">
       <li><a href="#">TOP</a></li>
-      <li><a href="./front-page.php">ホメポジとは</a></li>
+      <li><a href="#about">ホメポジとは</a></li>
       <li><a href="#voice">参加者の声</a></li>
       <li><a href="#way">参加方法は？</a></li>
       <li><a href="#caution">注意事項</a></li>

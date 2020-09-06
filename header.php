@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8">
 
-  <title><?php bloginfo( 'name' ); ?><?php wp_title(); ?></title>
+  <title>ホメポジ | 明日にちょっと前向きになれるコミュニケーションの場所</title>
 
   <meta name="viewport" content="width=device-width">
 
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500|Sawarabi+Gothic&display=swap" rel="stylesheet">
-
   <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
 
+<!--font-awasome-->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 
-
+<!--font-->
   <script>
     (function(d) {
       var config = {
@@ -51,17 +50,16 @@
 
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" />
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" type="text/css" />
 
   <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/font.js" type="text/javaScript" charset="utf-8"></script>
 
   <header class="header">
     <p class="logo">
@@ -76,17 +74,10 @@
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <!--share-->
-      <div class="recrut"><a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>">
-          <i class="fa fa-envelope"></i>応募する
-        </a></div>
+      <div class="recrut">
+         <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>">
+          <i class="fa fa-envelope"></i>応募する</a></div>
     </div>
     <!--send-->
-    <!--
-    <nav>
-      <div class="container">
-        <?php wp_nav_menu( 'theme_location=navigation' ); ?>
-      </div>
-    </nav>
--->
   </header>
   <!--header-->

@@ -1,11 +1,7 @@
 <?php get_header(); ?>
 
-<!--<img src="<?php echo get_template_directory_uri(); ?>/header-top.jpg" width="1500" height="460" alt="" class="largeheader">-->
-
-
 <div class="topmenu">
   <div class="container">
-    <!--    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fv.png" class="bg">-->
     <div id="fv" class="bg">
       <div class="fv__box"><strong class="mes js-anime">ちょっと自分が<span class="red">スキ</span>になる！</strong><strong class="js-anime">ようこそ、<span>ホメポジ</span>へ！</strong></div>
       <!--fv__box-->
