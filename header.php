@@ -10,10 +10,10 @@
 
   <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
 
-<!--font-awasome-->
+  <!--font-awasome-->
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 
-<!--font-->
+  <!--font-->
   <script>
     (function(d) {
       var config = {
@@ -43,12 +43,15 @@
       };
       s.parentNode.insertBefore(tk, s)
     })(document);
+
   </script>
 
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.js" type="text/css" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css" type="text/css" />
 
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sub.css" type="text/css" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -62,9 +65,9 @@
 <body <?php body_class(); ?>>
 
   <header class="header">
-    <p class="logo">
+    <p class="logo bg">
       <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/homepoji.png" width="150" height="150" alt="" class="largeheader">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png" width="150" height="150" alt="" class="largeheader">
       </a>
     </p>
 
@@ -75,7 +78,7 @@
       </div>
       <!--share-->
       <div class="recrut">
-         <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>">
+        <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>">
           <i class="fa fa-envelope"></i>応募する</a></div>
     </div>
     <!--send-->
