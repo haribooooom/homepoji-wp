@@ -67,7 +67,7 @@
   <header class="header">
     <p class="logo bg">
       <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png" width="150" height="150" alt="" class="largeheader">
+<!--        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png" width="150" height="150" alt="" class="largeheader">-->
       </a>
     </p>
 

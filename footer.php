@@ -2,7 +2,7 @@
 <footer>
   <div class="footer__inner flex">
 
-    <div class="logo bg"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png" width="150" height="150" alt="" class="largeheader"></div>
+    <div class="logo bg"></div>
 
     <!--f-logo-->
     <ul class="f-nav pc__flex">
@@ -70,12 +70,13 @@
       delay: 5000,
     },
     spaceBetween: 20,
+    loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-    loop: true,
-    autoplay: true,
+//    autoplay: true,
+    autoplay: false,
   });
 
   let slider2 = new Swiper('.swiper-fmes-container', {
@@ -102,7 +103,8 @@
         spaceBetween: 0
       }
     },
-    autoplay: true,
+//    autoplay: true,
+    autoplay: false,
   });
 </script>
 

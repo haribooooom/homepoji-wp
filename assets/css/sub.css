@@ -212,6 +212,17 @@ article img {
   .blogmenu {
     width: 30%;
     float: right; } }
+/* トップページ */
+.largeheader {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom; }
+
+.home header {
+  margin-bottom: 0; }
+.home footer {
+  margin-top: 0; }
+
 /* トップページのメニュー */
 .topmenu {
   padding-bottom: 40px; }

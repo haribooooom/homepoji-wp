@@ -318,6 +318,26 @@ article img {
 
 }
 
+
+/* トップページ */
+.largeheader {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom
+}
+
+.home {
+
+  header {
+    margin-bottom: 0
+  }
+
+  footer {
+    margin-top: 0
+  }
+}
+
+
 /* トップページのメニュー */
 .topmenu {
   //  padding-top: 40px;
