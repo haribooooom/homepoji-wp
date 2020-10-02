@@ -25,12 +25,30 @@
 
 <body <?php body_class(); ?>>
 
-  <header class="header">
-    <p class="logo bg">
-      <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
-<!--        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png" width="150" height="150" alt="" class="largeheader">-->
-      </a>
-    </p>
+  <header>
+    <div class="header">
+      <div class="flex">
+        <div class="logo">
+          <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
+          </a>
+        </div>
+        <div class="menubox">
+          <span class="bar"></span>
+        </div>
+        <!--flex-->
+        <nav id="g-nav">
+          <ul class="flex">
+            <li><a href="#">TOP</a></li>
+            <li><a href="#about">ホメポジとは</a></li>
+            <li><a href="#voice">参加者の声</a></li>
+            <li><a href="#way">参加方法</a></li>
+            <li><a href="#caution">注意事項</a></li>
+            <li><a href="#qa">ホメポジQ＆A</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
     <div class="send flex fix">
       <div class="tw-share">
@@ -40,7 +58,8 @@
       <!--share-->
       <div class="recrut">
         <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>">
-          <i class="fa fa-envelope"></i>応募する</a></div>
+          <i class="fa fa-envelope"></i>応募する</a>
+      </div>
     </div>
     <!--send-->
   </header>
