@@ -1,6 +1,6 @@
 <div id="topBtn"><a href="#">⬆︎</a></div>
 <footer>
-  <div class="footer__inner flex">
+  <div class="inner flex">
 
     <div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"></div>
 
@@ -17,7 +17,7 @@
     <small>Copyright &copy; <?php bloginfo( 'name' ); ?></small>
 
   </div>
-  <!--footer__inner-->
+  <!--inner-->
 </footer>
 </div>
 <!--wrapper-->
