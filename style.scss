@@ -64,9 +64,8 @@ $wh:#fff;
 div[class$="__inner"] {
   margin: 0 auto;
   padding: 50px 20px;
-
+overflow: hidden;
   @include mq-pc {
-    max-width: 960px;
   }
 }
 
@@ -151,24 +150,20 @@ p {
 /*send*/
 
 .send {
+  height: 60px;
   bottom: 0;
   z-index: 999;
 
   @include mq-tablet {
-    flex-direction: column;
-    top: 20%;
+    width: 25%;
+    top:80px;
     right: 0;
-    margin: 0 auto;
+    bottom: 160px;
+    height: 40px;
   }
 
   .fa {
     margin-right: 1rem;
-
-    @include mq-tablet {
-      width: 100%;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
   }
 
   div {
@@ -176,10 +171,6 @@ p {
     box-shadow: 0 0 3px #aaa;
 
     @include mq-tablet {
-      width: auto;
-      border-radius: 20px 0 0 20px;
-      border: 6px solid $wh;
-      border-right: none;
     }
   }
 
@@ -189,16 +180,17 @@ p {
     text-align: center;
     font-size: 2rem;
     color: $wh;
+      @include mq-tablet {
+        padding: 5px;
+    }
   }
 
   .tw-share {
     background-color: $tw-color;
 
     @include mq-tablet {
-      margin-bottom: 30%;
     }
   }
-
   .recrut {
     background-color: #fd5858;
   }
@@ -239,10 +231,11 @@ p {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   @include mq-tablet {
     justify-content: center;
     flex-direction: column-reverse;
-}
+  }
 
   a {
     position: relative;
@@ -276,22 +269,32 @@ p {
 
 /*header-----------------------------------*/
 .header {
+width: 100%;
   background-color: $theme-color;
   color: $wh;
+  height: 80px;
+  position: fixed;
+  z-index: 999;
+  .inner{
+      @include mq-tablet {
+        padding: 10px;
+    }
+  }
 
   a {
     color: $wh;
   }
-  .flex{
+
+  .flex {
     justify-content: space-between;
     align-items: center;
   }
 }
 
-.logo{
-    width: 60px;
+.logo {
+  width: 60px;
   margin-left: 20px;
-  }
+}
 
 .menubox {
   margin: 0;
@@ -302,6 +305,10 @@ p {
   z-index: 999;
   cursor: pointer;
   background-color: $bl;
+
+  @include mq-tablet {
+    display: none;
+  }
 
   &:hover {
     cursor: pointer;
@@ -343,20 +350,32 @@ nav#g-nav {
   z-index: 9;
   transition: 0.8s;
   transform: translate(100%, 0);
-  background-color: rgba(0, 0, 0, 0.6);
 
-  @include mq-pc {
-    transform: translate(0%, 0);
-    height: 100vh;
+  @include mq-tablet {
+    position: relative;
+    width: 90%;
+    height: auto;
+    top: 0;
+    transform: translate(0, 0);
   }
 
   .flex {
     flex-direction: column;
+
+    @include mq-tablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   ul li {
     border-bottom: 1px solid $wh;
-      width: 100%;
+    width: 100%;
+
+    @include mq-tablet {
+      border: none;
+    }
+
     a {
       display: block;
       text-align: center;
@@ -365,10 +384,10 @@ nav#g-nav {
       font-size: 1.6rem;
       background-color: rgba(0, 0, 0, 0.6);
 
-      @include mq-pc {
-        width: 50%;
-        text-align: left;
-        color: $wh;
+      @include mq-tablet {
+        color: $bl;
+        padding: 0px;
+        background-color: transparent;
       }
 
       &:hover {
@@ -384,48 +403,8 @@ nav#g-nav {
   &.click {
     transition: 0.8s;
     transform: translate(0, 0);
-
-    @include mq-pc {
-      transform: translate(0, 0);
-    }
-  }
-  }
-
-/* ナビゲーションメニュー */
-header > nav {
-  ul {
-//    display: none;
-
-    @media screen and (min-width: 460px) {
-//      display: flex;
-//      justify-content: space-around;
-//      align-items: center;
-//      max-width: 980px;
-    }
-  }
-
-  li {
-//    color: $theme-color;
-//    width: calc(100% / 4);
-
-    a {
-//      text-align: center;
-//      color: $wh;
-//      display: block;
-//      padding: 20px 0;
-//      font-size: 1.4rem;
-
-      &:hover {
-//        color: #e6cc1c;
-      }
-    }
   }
 }
-
-
-
-
-
 
 /*elem-----------------------------------*/
 
@@ -436,7 +415,7 @@ header > nav {
 
 /*fv-----------------------------------*/
 #fv {
-  height: 100vh;
+  height: 80vh;
   background-image: url(./assets/img/fv.png);
   background-attachment: fixed;
   overflow: hidden;
@@ -448,6 +427,8 @@ header > nav {
     bottom: -30px;
     margin: 0 auto;
     z-index: 9;
+      @include mq-tablet {
+    }
   }
 
 }
@@ -895,12 +876,12 @@ footer {
   padding-bottom: 14px;
   background-color: $theme-color;
 
-  .logo{
+  .logo {
     @extend .logo;
   }
 
   .inner {
-    padding: 40px 40px 60px;
+    padding: 20px 20px 60px;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -923,23 +904,25 @@ footer {
     @include mq-tablet {
       margin-bottom: 0;
       margin-left: 0;
-            &:last-of-type a {
+
+      &:last-of-type a {
         border-right: none;
-    }
-
-    a {
-      line-height: 1.6;
-      color: $bl;
-
-      @include mq-tablet {
-        font-size: 1rem;
-        display: block;
-        padding: 0 10px;
-        border-right: 1px solid $bl;
       }
+
     }
+      a {
+        line-height: 1.6;
+        padding: 10px;
+        color: $bl;
+
+        @include mq-tablet {
+          font-size: 1rem;
+          display: block;
+          padding: 0 10px;
+          border-right: 1px solid $bl;
+        }
+      }
   }
-}
 }
 
 small {

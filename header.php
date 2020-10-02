@@ -27,6 +27,7 @@
 
   <header>
     <div class="header">
+     <div class="inner">
       <div class="flex">
         <div class="logo">
           <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
@@ -48,7 +49,8 @@
           </ul>
         </nav>
       </div>
-    </div>
+      </div>
+      </div>
 
     <div class="send flex fix">
       <div class="tw-share">
