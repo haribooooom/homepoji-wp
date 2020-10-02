@@ -24,3 +24,4 @@
   }
   showElementAnimation();
   window.addEventListener('scroll', showElementAnimation);
+
