@@ -34,7 +34,7 @@
     <div id="voice">
       <div class="voice__inner">
         <h2>参加した人の声</h2>
-        <div class="voice__wrap">
+        <div class="voice-wrap">
 
           <div class="swiper-voice-container">
             <div class="swiper-wrapper">
@@ -78,7 +78,7 @@
           <!--voice__right-->
 
         </div>
-        <!--voice__wrap-->
+        <!--voice-wrap-->
 
 
       </div>

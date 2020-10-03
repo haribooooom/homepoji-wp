@@ -27,7 +27,7 @@
 
   <header>
     <div class="header">
-     <div class="inner">
+     <div class="h-wrap">
       <div class="flex">
         <div class="logo">
           <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
