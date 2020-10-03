@@ -59,8 +59,7 @@ Version: 1.0
 .bg {
   background-repeat: no-repeat;
   background-origin: border-box;
-  background-size: cover;
-  position: relative; }
+  background-size: cover; }
 
 .bold {
   font-weight: bold; }
@@ -201,7 +200,7 @@ p {
   width: 100%;
   background-color: #FDE458;
   color: #fff;
-  height: 80px;
+  height: 60px;
   position: fixed;
   z-index: 999; }
   @media screen and (min-width: 768px) {
@@ -214,13 +213,13 @@ p {
     align-items: center; }
 
 .logo, footer .logo {
-  width: 60px;
+  width: 40px;
   margin-left: 20px; }
 
 .menubox {
   margin: 0;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: inline-block;
   position: relative;
   z-index: 999;
@@ -260,7 +259,7 @@ nav#g-nav {
   width: 100%;
   position: fixed;
   display: block;
-  top: 80px;
+  top: 60px;
   z-index: 9;
   transition: 0.8s;
   transform: translate(100%, 0); }

@@ -99,7 +99,7 @@ overflow: hidden;
   background-repeat: no-repeat;
   background-origin: border-box;
   background-size: cover;
-  position: relative;
+//  position: relative;
 }
 
 .bold {
@@ -280,7 +280,7 @@ p {
 width: 100%;
   background-color: $theme-color;
   color: $wh;
-  height: 80px;
+  height: 60px;
   position: fixed;
   z-index: 999;
   .h-wrap{
@@ -300,14 +300,14 @@ width: 100%;
 }
 
 .logo {
-  width: 60px;
+  width: 40px;
   margin-left: 20px;
 }
 
 .menubox {
   margin: 0;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   display: inline-block;
   position: relative;
   z-index: 999;
@@ -354,7 +354,7 @@ nav#g-nav {
   width: 100%;
   position: fixed;
   display: block;
-  top: 80px;
+  top: 60px;
   z-index: 9;
   transition: 0.8s;
   transform: translate(100%, 0);
@@ -423,7 +423,7 @@ nav#g-nav {
 
 /*fv-----------------------------------*/
 #fv {
-  height: 80vh;
+  height: 70vh;
   background-image: url(./assets/img/fv.png);
   background-attachment: fixed;
   overflow: hidden;
@@ -498,24 +498,22 @@ nav#g-nav {
     padding: 30px 100px;
   }
 
-  .about {
-    &__inner {
-      background-color: $wh;
+  .inner {
+    background-color: $wh;
 
-      @include mq-tablet {
-        padding: 20px;
-      }
+    @include mq-tablet {
+      padding: 20px;
     }
+  }
 
-    &__wrap {
-      position: relative;
-      background-image: url(assets/img/il_mes_love.png);
-      background-position: center;
-      background-size: contain;
+  .wrap {
+    position: relative;
+    background-image: url(assets/img/il_mes_love.png);
+    background-position: center;
+    background-size: contain;
 
-      @include mq-tablet {
-        background-position: right;
-      }
+    @include mq-tablet {
+      background-position: right;
     }
   }
 

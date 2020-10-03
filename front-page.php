@@ -8,10 +8,10 @@
       <img class="js-anime" src="<?php echo get_template_directory_uri(); ?>/assets/img/il_fv_having_fun.png">
     </div>
     <!--fv-->
-    <div id="about" class="bg">
-      <div class="about__inner">
-        <div class="about__wrap pc__flex bg">
-          <div class="about__box"><strong>最近、<br>褒められていますか？</strong>
+    <div id="about">
+      <div class="inner">
+        <div class="wrap pc-flex bg">
+          <div class="box"><strong>最近、<br>褒められていますか？</strong>
             <p>ホメポジは<br><span class="bold">「参加前よりちょっと自分を<span class="red">スキ</span>になる」</span><br>を目的としてお互いに頑張ったことを認め合う会です。</p>
             <ul>
               <li class="js-anime">頑張ってるのに報われない</li>
@@ -23,11 +23,11 @@
             <p class="js-anime">そのようなあなたに来て欲しいと思っています。</p>
             <div class="btn js-anime"><a href="./hoge.html">開催者の想い</a></div>
           </div>
-          <!--about__box-->
+          <!--box-->
         </div>
-        <!--about__wrap-->
+        <!--wrap-->
       </div>
-      <!--about__inner-->
+      <!--inner-->
     </div>
     <!--about-->
 
@@ -90,7 +90,7 @@
     <div id="way">
       <div class="way__inner">
         <h2>参加方法</h2>
-        <div class="way__box pc__flex">
+        <div class="way__box pc-flex">
           <div class="way__item  js-anime"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/il_way_conf.png" alt="">
             <p class="">後述の参加上の注意を確認する</p>
           </div>
