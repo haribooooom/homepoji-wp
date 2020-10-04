@@ -41,22 +41,21 @@
 
       <div class="swiper-voice-container mb20">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/il_way_conf.png" alt="">
-            <div class="txt">
-              <p>（ルイさん）</p>
-              <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+          <div class="swiper-slide">
+            <div class="wrap pc-flex">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <div class="txt">
+                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+                <p class="right">（ルイさん）</p>
+              </div>
             </div>
-            <!--box-->
+            <!--inner-->
           </div>
           <!--.swiper-slide-->
         </div>
         <!--swiper-wrapper-->
       </div>
       <!--swiper-container-->
-
-      <div class="box">
-        <div class="txt">何かしらのいい感じの言葉</div>
-      </div>
 
     </div>
     <!--voice-wrap-->

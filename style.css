@@ -341,30 +341,28 @@ nav#g-nav {
 
 /*voice
 -----------------------------------*/
-@media screen and (min-width: 768px) {
-  #voice .pc-flex {
-    justify-content: space-between;
-    align-items: flex-start; } }
-#voice .inner {
-  padding: 50px; }
-@media screen and (min-width: 768px) {
-  #voice .swiper-voice-container {
-    overflow: hidden; } }
 #voice .swiper-slide {
-  padding: 25px;
-  text-align: center;
-  position: relative;
-  transition-property: transform;
+  width: 80%;
+  margin: 0 auto;
   background-color: #f5f5f5;
   box-shadow: 0 0 3px #666; }
   #voice .swiper-slide img {
-    width: 70%;
-    margin-bottom: 20px; }
-
+    margin-bottom: 30px; }
+    @media screen and (min-width: 768px) {
+      #voice .swiper-slide img {
+        width: 25%; } }
+#voice .wrap {
+  padding: 25px 20px 30px; }
+  @media screen and (min-width: 768px) {
+    #voice .wrap {
+      justify-content: space-between;
+      align-items: center; } }
+#voice .right {
+  text-align: right; }
 @media screen and (min-width: 768px) {
-  .swiper-voice-container,
-  .voice-right {
-    width: calc((100%/2) - 20px); } }
+  #voice .txt {
+    margin-left: 40px; } }
+
 /*entry-----------------------------------*/
 #entry .item {
   margin: 0 auto;
@@ -418,7 +416,7 @@ nav#g-nav {
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin: 0 0 16px 0;
+  margin-bottom: 20px;
   color: #1A242B;
   /* --質問の＋アイコン */
   /* 答え */ }
@@ -436,7 +434,7 @@ nav#g-nav {
       border-radius: 0.5em 0.5em 0 0; }
   #qa .cp_qa .cp_actab label {
     margin: 0 0 0 0;
-    padding: 1.2em;
+    padding: 1em;
     position: relative;
     display: block;
     border-radius: 3px;
@@ -487,22 +485,8 @@ nav#g-nav {
 
 /*f-mes
 -----------------------------------*/
-@media screen and (min-width: 768px) {
-  .f-mes .inner {
-    padding: 100px; } }
-.f-mes .txt {
-  width: 80%;
-  margin: 0 auto;
-  padding: 60px 0;
-  border: 1px solid #323232;
-  border-left: 0;
-  border-right: 0; }
-  @media screen and (min-width: 768px) {
-    .f-mes .txt {
-      width: 100%;
-      padding: 80px 0; } }
-  .f-mes .txt p:last-of-type {
-    margin-bottom: 60px; }
+.f-mes span.red {
+  font-size: 2rem; }
 
 /*footer
 -----------------------------------*/

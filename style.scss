@@ -461,47 +461,35 @@ nav#g-nav {
 -----------------------------------*/
 
 #voice {
-.pc-flex {
-    @include mq-tablet {
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-  .inner {
-    padding: 50px;
-  }
-
-  .swiper {
-    &-voice-container {
-      @include mq-tablet {
-        overflow: hidden;
-      }
-    }
-
-    &-slide {
-      padding: 25px;
-      text-align: center;
-      position: relative;
-      transition-property: transform;
+  .swiper-slide {
+      width: 80%;
+      margin: 0 auto;
       background-color: #f5f5f5;
-
       @include shadow {}
-
       img {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+          @include mq-tablet {
+        width: 25%;
+        }
       }
     }
-
-  }
-
-}
-
-@include mq-tablet {
-    .swiper-voice-container,
-    .voice-right {
-      width: calc((100%/2) - 20px);
+  .wrap {
+    padding: 25px 20px 30px;
+      @include mq-tablet {
+    justify-content: space-between;
+    align-items: center;
     }
   }
+  .right{
+    text-align: right;
+  }
+  .txt {
+      @include mq-tablet {
+    margin-left: 40px;
+    }
+  }
+}
+
 
 /*entry-----------------------------------*/
 #entry {
