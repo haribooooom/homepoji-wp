@@ -184,7 +184,8 @@ a.wh,.wh>li>a{
 
 .float {
   z-index: 999;
-bottom: 0;
+  bottom: 0;
+
   @include mq-tablet {
     top:25%;
     right: 0;
@@ -192,38 +193,57 @@ bottom: 0;
     flex-direction: column;
   }
 
-  .fa {
-    margin-right: 1rem;
-      @include mq-tablet {
-    display: block;
-    }
-  }
-
   div {
     width: 50vw;
     @include mq-tablet {
-    width: 120px;
-      height: 120px;
+    width: 100px;
+      height: 100px;
     }
   }
 
   a {
-    padding: 16px;
+      height: 100px;
+    padding: 12px;
     display: block;
-    font-size: 2rem;
-    color: $wh;
-      @include mq-tablet {
-      flex-direction: column;
-    }
+    font-size: 1.8rem;
   }
 
   .tw-share {
     background-color: $tw-color;
+
+    span::after {
+      content: "シェアする";
+
+      @include mq-tablet {
+        content: "シェア";
+      }
+    }
   }
+
   .recrut {
     background-color: #fd5858;
+
+    span::after {
+      content: "応募する";
+
+      @include mq-tablet {
+        content: "応募";
+      }
+    }
   }
-}
+
+    .fa {
+    margin-right: 1rem;
+      @include mq-tablet {
+        margin: 0;
+        margin-top: 5px;
+       display: block;
+       font-size: 3.5rem;
+    }
+  }
+
+
+  }
 
 /*header-----------------------------------*/
 .header {
