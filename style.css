@@ -455,7 +455,7 @@ nav#g-nav {
       color: #1A242B; }
     #qa .cp_qa .cp_actab label::after {
       margin-left: 2rem;
-      font-size: 1.4em;
+      font-size: 1em;
       font-weight: bold;
       line-height: 1.4em;
       content: '▼';
