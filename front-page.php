@@ -37,7 +37,7 @@
   <div class="inner">
 
     <h2>参加した人の声</h2>
-    <div class="wrap pc-flex">
+    <div class="pc-flex">
 
       <div class="swiper-voice-container mb20">
         <div class="swiper-wrapper">
@@ -52,8 +52,32 @@
             <!--inner-->
           </div>
           <!--.swiper-slide-->
+                    <div class="swiper-slide">
+            <div class="wrap pc-flex">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <div class="txt">
+                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+                <p class="right">（ルイさん）</p>
+              </div>
+            </div>
+            <!--inner-->
+          </div>
+          <!--.swiper-slide-->
+                    <div class="swiper-slide">
+            <div class="wrap pc-flex">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <div class="txt">
+                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+                <p class="right">（ルイさん）</p>
+              </div>
+            </div>
+            <!--inner-->
+          </div>
+          <!--.swiper-slide-->
         </div>
         <!--swiper-wrapper-->
+            <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
       </div>
       <!--swiper-container-->
 
@@ -166,17 +190,6 @@
       <p>あなたのご参加をお待ちしております！</p>
     </div>
     <!--f-mes__box-->
-
-    <div class="swiper-fmes-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/00.jpg" alt="">
-        </div>
-        <!--swiper-slide-->
-      </div>
-      <!--swiper-wrapper-->
-    </div>
-    <!--swiper-container-->
 
   </div>
   <!--inner-->
