@@ -43,46 +43,19 @@
 
 
   let slider1 = new Swiper('.swiper-voice-container', {
-    speed: 1000,
-    autoplay: {
-      delay: 5000,
-    },
-    spaceBetween: 20,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-//    autoplay: true,
-    autoplay: false,
-  });
+  speed: 1000,
+  autoplay: {
+  delay: 5000,
+  },
+  spaceBetween: 60,
+  navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+  },
+  loop: true,
 
-  let slider2 = new Swiper('.swiper-fmes-container', {
-    speed: 1000,
-    autoplay: {
-      delay: 5000,
-    },
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 10
-      },
-      300: {
-        slidesPerView: 1,
-        spaceBetween: 0
-      }
-    },
-//    autoplay: true,
-    autoplay: false,
+  // autoplay: true,
+  autoplay: false,
   });
 </script>
 
