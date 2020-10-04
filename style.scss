@@ -7,16 +7,17 @@ Version: 1.0
 
 @charset "utf-8";
 @import"assets/css/reset.css";
-@import"assets/css/sub.css";
+//@import"assets/css/sub.css";
 
-$theme-color:#FDE458;
-$theme-sub-color: #1A242B;
+$main:#FDE458;
+$sub: #1A242B;
 $tw-color:#2c94e0;
 $bl:#323232;
 $c66:#666;
 $gr:#888;
 $pwh:#e8e8e8;
 $wh:#fff;
+$shadow:0 0 3px $bl;
 
 @for $btm from 1 through 8 {
   .mb#{$btm}0 {
@@ -36,28 +37,13 @@ $wh:#fff;
   }
 }
 
+@mixin shadow($color:$bl) {
+  box-shadow: 0 0 3px $color;
+}
+
 //レイアウト
 /* トップページのメニュー */
-.topmenu {
-//  padding-bottom: 40px;
-
-  @media (min-width: 500px) {
-//    overflow: hidden;
-  }
-}
-
-.wrapper {
-  overflow: hidden;
-
-  .container {
-    overflow: hidden;
-    margin: 0 auto;
-
-    @media (min-width: 768px) {}
-  }
-}
-
-.container > div:nth-of-type(2n) {
+body>div:nth-of-type(2n) {
   background-color: $pwh;
 }
 
@@ -66,44 +52,48 @@ $wh:#fff;
   padding: 50px 20px;
 overflow: hidden;
   @include mq-pc {
+    max-width: 960px;
   }
 }
-//div[class$="inner"] {
-//  margin: 0 auto;
-//  padding: 50px 20px;
-//overflow: hidden;
-//  @include mq-pc {
-//  }
-//}
 
 //ellement
 
 //flex
+
+.fix{
+  position: fixed;
+}
 
 .flex {
   display: flex;
 }
 
 @include mq-tablet {
-  .pc__flex {
+  .pc-flex {
     display: flex;
   }
 }
 
-.fix {
-  position: fixed;
+.tcenter{
+  text-align: center;
+}
+
+.center{
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
 }
 
 /*bg*/
 .bg {
   background-repeat: no-repeat;
   background-origin: border-box;
-  background-size: cover;
-//  position: relative;
+  background-size: contain;
+  background-position: center;
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 strong {
@@ -121,21 +111,24 @@ span.red {
 /*font*/
 h2 {
   margin-bottom: 50px;
-  padding-bottom: 20px;
   font-size: 3.2rem;
   text-align: center;
-  background-image: url(assets/img/border.png);
-  background-position: bottom;
-  background-repeat: no-repeat;
   font-family: a-otf-midashi-go-mb31-pr6n, sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
-p {
+p,a,li,li a {
   font-size: 1.6rem;
   line-height: 2;
-  margin-bottom: 20px;
+}
+
+a.bl,.bl>li>a{
+  color: $bl;
+}
+
+a.wh,.wh>li>a{
+  color: $wh;
 }
 
 /* js */
@@ -152,57 +145,7 @@ p {
   }
 }
 
-/*float
------------------------------------* /
-/*send*/
 
-.send {
-  height: 60px;
-  bottom: 0;
-  z-index: 999;
-
-  @include mq-tablet {
-    width: 25%;
-    top:80px;
-    right: 0;
-    bottom: 160px;
-    height: 40px;
-    flex-direction: column;
-  }
-
-  .fa {
-    margin-right: 1rem;
-  }
-
-  div {
-    width: 50vw;
-    box-shadow: 0 0 3px #aaa;
-    @include mq-tablet {
-    width: 25vw;
-    }
-  }
-
-  a {
-    padding: 20px 0;
-    display: block;
-    text-align: center;
-    font-size: 2rem;
-    color: $wh;
-      @include mq-tablet {
-//        padding: 20px;
-    }
-  }
-
-  .tw-share {
-    background-color: $tw-color;
-
-    @include mq-tablet {
-    }
-  }
-  .recrut {
-    background-color: #fd5858;
-  }
-}
 
 /*btn*/
 .btn a {
@@ -213,84 +156,105 @@ p {
   text-align: center;
   border-radius: 100px;
   font-size: 1.6rem;
-  background-color: $theme-color;
+  background-color: $main;
   color: $bl;
-  box-shadow: 0 0 3px $bl;
+  box-shadow: $shadow;
   transition: 1s;
 
   @include mq-tablet {
     width: 250px;
     margin-top: 20px;
     display: inline-block;
-    padding: 5%;
+    padding: 10px;
     font-size: 2rem;
   }
 
   &:hover {
     cursor: pointer;
-    background-color: $theme-sub-color;
+    background-color: $sub;
     color: $wh;
     transition: 1s;
   }
 }
 
-/*.tw-word*/
-.tw-word {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+/*header
+-----------------------------------* /
+/*float*/
+
+.float {
+  z-index: 999;
+  bottom: 0;
 
   @include mq-tablet {
-    justify-content: center;
-    flex-direction: column-reverse;
+    top:25%;
+    right: 0;
+    bottom: auto;
+    flex-direction: column;
+  }
+
+  div {
+    width: 50vw;
+    @include mq-tablet {
+    width: 100px;
+      height: 100px;
+    }
   }
 
   a {
-    position: relative;
+      height: 100px;
+    padding: 12px;
     display: block;
-    margin: 0 auto;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    box-shadow: 0 0 3px;
-    text-align: center;
-    font-size: 1.2rem;
-    border: 5px solid $tw-color;
-    color: $tw-color;
-    background-color: $wh;
+    font-size: 1.8rem;
   }
 
-  span {
-    position: absolute;
-    top: 25%;
-    left: 0px;
-    right: 0px;
+  .tw-share {
+    background-color: $tw-color;
+
+    span::after {
+      content: "シェアする";
+
+      @include mq-tablet {
+        content: "シェア";
+      }
+    }
   }
 
-  .fa {
-    width: 100%;
-    font-size: 4rem;
-    margin-bottom: 8px;
-  }
-}
+  .recrut {
+    background-color: #fd5858;
 
+    span::after {
+      content: "応募する";
+
+      @include mq-tablet {
+        content: "応募";
+      }
+    }
+  }
+
+    .fa {
+    margin-right: 1rem;
+      @include mq-tablet {
+        margin: 0;
+        margin-top: 5px;
+       display: block;
+       font-size: 3.5rem;
+    }
+  }
+
+
+  }
 
 /*header-----------------------------------*/
 .header {
 width: 100%;
-  background-color: $theme-color;
-  color: $wh;
-  height: 60px;
-  position: fixed;
+  background-color: $main;
+  height: 80px;
   z-index: 999;
   .h-wrap{
       @include mq-tablet {
         padding: 10px;
     }
-  }
-
-  a {
-    color: $wh;
   }
 
   .flex {
@@ -300,18 +264,17 @@ width: 100%;
 }
 
 .logo {
-  width: 40px;
+  width: 60px;
   margin-left: 20px;
 }
 
 .menubox {
   margin: 0;
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   display: inline-block;
   position: relative;
   z-index: 999;
-  cursor: pointer;
   background-color: $bl;
 
   @include mq-tablet {
@@ -328,11 +291,9 @@ width: 100%;
 .bar::after {
   display: block;
   position: absolute;
+  @extend .center;
   top: 50%;
-  left: 0;
   bottom: 0;
-  right: 0;
-  margin: 0 auto;
   width: 40px;
   height: 4px;
   border-radius: 3px;
@@ -352,9 +313,8 @@ width: 100%;
 /* ナビゲーションメニュー */
 nav#g-nav {
   width: 100%;
-  position: fixed;
   display: block;
-  top: 60px;
+  top: 80px;
   z-index: 9;
   transition: 0.8s;
   transform: translate(100%, 0);
@@ -386,10 +346,8 @@ nav#g-nav {
 
     a {
       display: block;
-      text-align: center;
-      color: $wh;
       padding: 20px;
-      font-size: 1.6rem;
+      font-weight: 600;
       background-color: rgba(0, 0, 0, 0.6);
 
       @include mq-tablet {
@@ -399,7 +357,7 @@ nav#g-nav {
       }
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.4);
+        color: $wh;
       }
     }
 
@@ -414,73 +372,52 @@ nav#g-nav {
   }
 }
 
-/*elem-----------------------------------*/
-
-.mes {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
 /*fv-----------------------------------*/
 #fv {
   height: 70vh;
+  z-index: -9999;
+  overflow: hidden;
+
+  &.bg-img{
+  position: relative;
   background-image: url(./assets/img/fv.png);
   background-attachment: fixed;
-  overflow: hidden;
-  position: relative;
-  z-index: -9999;
+  background-size: cover;
+  }
+
 
   img {
+    @extend .center;
     position: absolute;
-    bottom: -30px;
-    margin: 0 auto;
+    bottom: -50px;
     z-index: 9;
-      @include mq-tablet {
-    }
   }
 
-}
-
-.fv__box {
-  width: 85%;
-  margin: 20px;
-  position: absolute;
-  top: 40%;
-  left: 0px;
-  right: 0px;
-  margin: 0 auto;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 99;
-
-  @include mq-tablet {
-    width: 70%;
+  .box {
+    font-size: 3rem;
+    width: 85%;
+    padding: 20px;
     position: absolute;
-    top: 50%;
-  }
-
-  strong {
-    margin-bottom: 0;
-  }
-}
-
-@include mq-tablet {
-  #fv img {
-    position: absolute;
-    top: 50px;
+    top: 40%;
     left: 0px;
-    bottom: 0px;
     right: 0px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 99;
+
+    @include mq-tablet {
+      width: 70%;
+      top: 50%;
+    }
+
+    strong {
+      margin-bottom: 0;
+    }
   }
 }
 
 #about,
 #attention {
-  ul {
-    margin-bottom: 40px;
-  }
-
   li {
     margin-bottom: 20px;
     margin-left: 2rem;
@@ -494,58 +431,40 @@ nav#g-nav {
 #about {
   padding: 30px 20px;
 
-  @include mq-tablet {
-    padding: 30px 100px;
-  }
-
   .inner {
-    background-color: $wh;
-
-    @include mq-tablet {
-      padding: 20px;
-    }
+      background-color: $wh;
+      @include mq-tablet {
+        padding: 50px;
+      }
   }
 
-  .wrap {
-    position: relative;
-    background-image: url(assets/img/il_mes_love.png);
-    background-position: center;
-    background-size: contain;
+  .bg-img {
+      position: relative;
+      background-image: url(assets/img/il_mes_love.png);
 
-    @include mq-tablet {
-      background-position: right;
-    }
+      @include mq-tablet {
+        background-position: right;
+      }
   }
 
-  img {
-    display: none;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-
-    @include mq-tablet {
-      display: inherit;
-      height: 90vh;
-      right: 0;
-    }
-  }
 }
 
 /*voice
 -----------------------------------*/
-.voice-wrap {
-  position: relative;
-}
 
 #voice {
-  .voice__inner {
+.pc-flex {
+    @include mq-tablet {
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+  .inner {
     padding: 50px;
   }
 
   .swiper {
     &-voice-container {
-      margin-bottom: 20px;
-
       @include mq-tablet {
         overflow: hidden;
       }
@@ -557,158 +476,83 @@ nav#g-nav {
       position: relative;
       transition-property: transform;
       background-color: #f5f5f5;
-      box-shadow: 0 0 3px #aaa;
-
+      box-shadow: $shadow;
       img {
         width: 70%;
         margin-bottom: 20px;
       }
     }
 
-    &-pagination-bullet {
-      width: 20px;
-      height: 20px;
-      display: inline-block;
-      border-radius: 100%;
-      background: #000;
-      opacity: 0.2;
-      margin: 10px;
-    }
-
   }
 
-}
-
-.voice-right {
-  margin: 0 auto;
-  height: 60vh;
-  background-image: url(assets/img/il_sp.png);
-  background-position: right;
-  background-size: contain;
-
-  @include mq-tablet {
-    height: auto;
-    background-image: none;
-  }
-
-  img {
-    display: none;
-
-    @include mq-tablet {
-      display: block;
-    }
-  }
 }
 
 @include mq-tablet {
-  .voice-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
     .swiper-voice-container,
     .voice-right {
       width: calc((100%/2) - 20px);
     }
   }
-}
 
 /*way-----------------------------------*/
+#entry {
+  .item {
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    margin-bottom: 50px;
+    font-size: 1.8rem;
 
+    @include mq-tablet {
+      width: calc((100% / 3) - 50px);
+      margin-bottom: 0;
+      font-size: 1.6rem;
+    }
 
-.way__item {
-  margin: 0 auto;
-  text-align: center;
-  width: 70%;
-  margin-bottom: 50px;
-  font-size: 1.8rem;
+    img {
+      margin-bottom: 20px;
+      border-radius: 50%;
+      box-shadow: $shadow;
+    }
 
-  @include mq-tablet {
-    width: calc((100% / 3) - 50px);
-    margin-bottom: 0;
-    font-size: 1.6rem;
-  }
-
-  img {
-    margin-bottom: 20px;
-    border-radius: 50%;
-    box-shadow: 0 0 3px #cccccc;
-  }
-}
-
-@include mq-tablet {
-  .way__item p {
-    line-height: 1.6;
   }
 }
 
 /*attention
 -----------------------------------*/
-
-.attention__wrap {
+#attention{
+  @include mq-tablet {
+    img{
+      display: none;
+    }
+}
+.bg-img {
   margin: 0 auto;
   padding: 20px;
   border: 10px solid #fafafa;
   border-radius: 10px;
 
   @include mq-tablet {
+    width: 100%;
     height: 60vh;
     padding: 40px 60px;
     background-image: url(assets/img/il_caution_warning.png);
-    background-attachment: fixed;
     background-position: right;
-    background-size: 80%;
-    position: relative;
-
-    img {
-      display: none;
-    }
+    background-size: 60%;
   }
 }
-
-@include mq-tablet {
-  .attention__box {
-    position: absolute;
-    top: 10%;
-    bottom: 0;
-    right: 0;
-    margin: 0 auto;
-  }
 }
 
 
 /*QA-----------------------------------*/
 
-.qa__items {
+#qa{
+
+.items {
   margin: 0 auto;
-  margin-bottom: 40px;
 
   @include mq-tablet {
     width: 80%;
-  }
-}
-
-.qa__btn__items {
-  text-align: center;
-
-  img {
-    width: 80%;
-    margin-bottom: 10px;
-  }
-}
-
-.qa-mes {
-  margin-bottom: 30px;
-}
-
-@include mq-tablet {
-  .qa__btn__items img {
-    width: 300px;
-    margin-bottom: 10px;
-  }
-
-  #qa .btn {
-    margin: 0 auto;
   }
 }
 
@@ -724,7 +568,7 @@ nav#g-nav {
   overflow: hidden;
   width: 100%;
   margin: 0 0 16px 0;
-  color: $theme-sub-color;
+  color: $sub;
 
   input {
     position: absolute;
@@ -739,18 +583,10 @@ nav#g-nav {
 
     /* 質問をクリックした時のアイコンの動き */
     &:checked ~ label {
-      color: $theme-sub-color;
+      color: $sub;
       border-radius: 0.5em 0.5em 0 0;
     }
 
-  }
-
-  /* 質問をクリックした時の+の動き */
-  input[type=checkbox]:checked + label::after {
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
   }
 
   label {
@@ -762,7 +598,7 @@ nav#g-nav {
     font-size: 1.6rem;
     line-height: 2;
     font-weight: bold;
-    background: $wh;
+    background: $main;
     cursor: pointer;
 
     &::before {
@@ -774,22 +610,22 @@ nav#g-nav {
 
     &:hover {
       transition: all 0.3s;
-      color: $theme-sub-color;
+      color: $sub;
     }
 
     &::after {
-      font-size: 1.7em;
-      font-weight: bold;
-      line-height: 2em;
-      position: absolute;
-      top: 0;
-      right: 0;
-      content: '+';
-      display: inline-block;
-      width: 2em;
-      height: 2em;
-      -webkit-transition: transform 0.5s;
-      transition: transform 0.5s;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.6em;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+    content: '▼';
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    -webkit-transition: transform 0.5s;
+    transition: transform 0.5s;
     }
   }
 
@@ -822,21 +658,31 @@ nav#g-nav {
 
 }
 
+}
+
+
+
+
+
+
 
 
 /*f-mes
 -----------------------------------*/
 .f-mes {
-  text-align: center;
+@include mq-tablet {
+  .inner {
+    padding: 100px;
+  }
+}
 
-  &__box {
+  .txt {
     width: 80%;
     margin: 0 auto;
     padding: 60px 0;
     border: 1px solid $bl;
     border-left: 0;
     border-right: 0;
-
     @include mq-tablet {
       width: 100%;
       padding: 80px 0;
@@ -848,95 +694,61 @@ nav#g-nav {
   }
 }
 
-@include mq-tablet {
-  .f-mes__inner {
-    padding: 100px;
-  }
-}
+/*footer
+-----------------------------------*/
 
 /*top
 -----------------------------------*/
 #topBtn {
   width: 100%;
-  text-align: center;
   background-color: $bl;
+    &:hover {
+      opacity: 0.8;
+    }
 
   a {
     font-size: 2rem;
     display: block;
-    padding: 20px 0;
-    color: $wh;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }
 
-
-
-/*footer
------------------------------------*/
 footer {
-  text-align: center;
-  padding-bottom: 14px;
-  background-color: $theme-color;
-
-  .logo {
-    @extend .logo;
-  }
-
+  background-color: $main;
   .inner {
-    padding: 20px 20px 60px;
+    padding: 20px 20px 90px;
     justify-content: space-between;
     flex-wrap: wrap;
-
     @include mq-tablet {
-      padding: 40px;
+      padding:20px;
     }
   }
+
+  .sns{
+    font-size: 2rem;
+    i{
+      font-size: 5rem;
+      margin-right: 1rem;
+    }
+  }
+  @include mq-tablet {
+  a:hover{
+         opacity: 0.8;
+  }
+}
 }
 
 .f-nav {
   @include mq-tablet {
-    justify-content: space-between;
     margin-bottom: 30px;
+    justify-content: space-between;
   }
 
-  li {
-    margin-left: 0;
-    list-style: none;
-
-    @include mq-tablet {
-      margin-bottom: 0;
-      margin-left: 0;
-
-      &:last-of-type a {
-        border-right: none;
       }
 
-    }
-      a {
-        line-height: 1.6;
-        padding: 10px;
-        color: $bl;
-
-        @include mq-tablet {
-          font-size: 1rem;
-          display: block;
-          padding: 0 10px;
-          border-right: 1px solid $bl;
-        }
-      }
-  }
-}
 
 small {
   width: 100%;
 }
-
-
-
 
 /* お問い合わせフォーム */
 .wpcf7 {
@@ -982,7 +794,7 @@ small {
       }
 
       &:checked:after {
-        background-color: $theme-color;
+        background-color: $main;
       }
     }
 
@@ -992,7 +804,8 @@ small {
       margin-top: 5px;
       padding: 1.5%;
       width: 100%;
-      box-shadow: 0 0 3px #e7e7e7;
+//      box-shadow: 0 0 3px #e7e7e7;
+      box-shadow: 0 0 3px $shadow;
       box-sizing: border-box;
       border: 1px solid #f3f3f3;
       resize: none;
@@ -1003,7 +816,7 @@ small {
       padding: 10px;
       margin-top: 30px;
       border: none;
-      background-color: $theme-color;
+      background-color: $main;
       -webkit-appearance: none;
       cursor: pointer;
 
@@ -1024,8 +837,12 @@ textarea {
   margin-top: 5px;
   padding: 1%;
   width: 100%;
-  box-shadow: 0 0 3px #e7e7e7;
+  box-shadow: $shadow;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   resize: none;
 }
+
+
+
+

@@ -1,21 +1,20 @@
-<div id="topBtn"><a href="#">⬆︎</a></div>
-<footer>
-  <div class="inner flex">
-
-    <div class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"></div>
-
-    <!--f-logo-->
-    <ul class="f-nav pc__flex">
-      <li><a href="#">TOP</a></li>
+<footer class="tcenter">
+<div id="topBtn"><a href="#" class="wh">⬆︎</a></div>
+  <div class="inner">
+    <ul class="f-nav pc-flex bold bl mb20">
+      <li><a href="#">ホーム</a></li>
       <li><a href="#about">ホメポジとは</a></li>
       <li><a href="#voice">参加者の声</a></li>
-      <li><a href="#way">参加方法は？</a></li>
-      <li><a href="#caution">注意事項</a></li>
+      <li><a href="#entry">参加方法</a></li>
+      <li><a href="#attention">注意事項</a></li>
       <li><a href="#qa">ホメポジQ&amp;A</a></li>
     </ul>
     <!--f-nav-->
-    <small>Copyright &copy; <?php bloginfo( 'name' ); ?></small>
+    <div class="sns mb20">
+      <div class="tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>ホメポジTwitter</a></div>
+    </div>
 
+    <small>Copyright &copy; <?php bloginfo( 'name' ); ?></small>
   </div>
   <!--inner-->
 </footer>

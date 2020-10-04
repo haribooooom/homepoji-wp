@@ -26,7 +26,7 @@
 <body <?php body_class(); ?>>
 
   <header>
-    <div class="header">
+    <div class="header fix">
      <div class="h-wrap">
       <div class="flex">
         <div class="logo">
@@ -38,8 +38,9 @@
           <span class="bar"></span>
         </div>
         <!--flex-->
-        <nav id="g-nav">
-          <ul class="flex">
+        <nav id="g-nav" class="tcenter fix
+          bold">
+          <ul class="flex wh">
             <li><a href="#">TOP</a></li>
             <li><a href="#about">ホメポジとは</a></li>
             <li><a href="#voice">参加者の声</a></li>
@@ -52,17 +53,17 @@
       </div>
       </div>
 
-    <div class="send flex fix">
+    <div class="float flex fix bold tcenter">
       <div class="tw-share">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i>シェアする</a>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false" class="wh"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <!--share-->
       <div class="recrut">
-        <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>">
-          <i class="fa fa-envelope"></i>応募する</a>
+        <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>" class="wh">
+          <i class="fa fa-envelope"></i><span></span></a>
       </div>
     </div>
-    <!--send-->
+    <!--float-->
   </header>
   <!--header-->
