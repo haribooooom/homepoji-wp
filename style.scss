@@ -17,6 +17,7 @@ $c66:#666;
 $gr:#888;
 $pwh:#e8e8e8;
 $wh:#fff;
+$shadow:0 0 3px $bl;
 
 @for $btm from 1 through 8 {
   .mb#{$btm}0 {
@@ -116,14 +117,13 @@ h2 {
 p,a,li,li a {
   font-size: 1.6rem;
   line-height: 2;
-//  margin-bottom: 12px;
 }
 
 a.bl,.bl>li>a{
   color: $bl;
 }
 
-a.wh,.wh>a{
+a.wh,.wh>li>a{
   color: $wh;
 }
 
@@ -154,7 +154,7 @@ a.wh,.wh>a{
   font-size: 1.6rem;
   background-color: $main;
   color: $bl;
-  box-shadow: 0 0 3px $bl;
+  box-shadow: $shadow;
   transition: 1s;
 
   @include mq-tablet {
@@ -179,13 +179,12 @@ a.wh,.wh>a{
 /*send*/
 
 .send {
-  bottom: 0;
   z-index: 999;
 
   @include mq-tablet {
     width: 200px;
     top:80px;
-    right: 0;
+    right: 5%;
     flex-direction: column;
   }
 
@@ -195,7 +194,7 @@ a.wh,.wh>a{
 
   div {
     width: 50vw;
-    box-shadow: 0 0 3px #aaa;
+    box-shadow: $shadow;
     @include mq-tablet {
     width: 25vw;
     }
@@ -223,18 +222,12 @@ a.wh,.wh>a{
 .header {
 width: 100%;
   background-color: $main;
-  color: $wh;
   height: 80px;
-  position: fixed;
   z-index: 999;
   .h-wrap{
       @include mq-tablet {
         padding: 10px;
     }
-  }
-
-  a {
-    color: $wh;
   }
 
   .flex {
@@ -255,7 +248,6 @@ width: 100%;
   display: inline-block;
   position: relative;
   z-index: 999;
-  cursor: pointer;
   background-color: $bl;
 
   @include mq-tablet {
@@ -272,11 +264,9 @@ width: 100%;
 .bar::after {
   display: block;
   position: absolute;
+  @extend .center;
   top: 50%;
-  left: 0;
   bottom: 0;
-  right: 0;
-  margin: 0 auto;
   width: 40px;
   height: 4px;
   border-radius: 3px;
@@ -296,7 +286,6 @@ width: 100%;
 /* ナビゲーションメニュー */
 nav#g-nav {
   width: 100%;
-  position: fixed;
   display: block;
   top: 80px;
   z-index: 9;
@@ -330,10 +319,7 @@ nav#g-nav {
 
     a {
       display: block;
-      text-align: center;
-      color: $wh;
       padding: 20px;
-      font-size: 1.6rem;
       font-weight: 600;
       background-color: rgba(0, 0, 0, 0.6);
 
@@ -463,8 +449,7 @@ nav#g-nav {
       position: relative;
       transition-property: transform;
       background-color: #f5f5f5;
-      box-shadow: 0 0 3px #aaa;
-
+      box-shadow: $shadow;
       img {
         width: 70%;
         margin-bottom: 20px;
@@ -500,7 +485,7 @@ nav#g-nav {
     img {
       margin-bottom: 20px;
       border-radius: 50%;
-      box-shadow: 0 0 3px #cccccc;
+      box-shadow: $shadow;
     }
 
   }
@@ -792,7 +777,8 @@ small {
       margin-top: 5px;
       padding: 1.5%;
       width: 100%;
-      box-shadow: 0 0 3px #e7e7e7;
+//      box-shadow: 0 0 3px #e7e7e7;
+      box-shadow: 0 0 3px $shadow;
       box-sizing: border-box;
       border: 1px solid #f3f3f3;
       resize: none;
@@ -824,7 +810,7 @@ textarea {
   margin-top: 5px;
   padding: 1%;
   width: 100%;
-  box-shadow: 0 0 3px #e7e7e7;
+  box-shadow: $shadow;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   resize: none;

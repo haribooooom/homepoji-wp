@@ -38,9 +38,9 @@
           <span class="bar"></span>
         </div>
         <!--flex-->
-        <nav id="g-nav" class="t
+        <nav id="g-nav" class="tcenter fix
           bold">
-          <ul class="flex">
+          <ul class="flex wh">
             <li><a href="#">TOP</a></li>
             <li><a href="#about">ホメポジとは</a></li>
             <li><a href="#voice">参加者の声</a></li>
