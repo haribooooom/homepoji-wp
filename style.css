@@ -90,14 +90,19 @@ h2 {
   font-weight: 600;
   font-style: normal; }
 
-p, a, li, li a {
+p,
+a,
+li,
+li a {
   font-size: 1.6rem;
   line-height: 2; }
 
-a.bl, .bl > li > a {
+a.bl,
+.bl > li > a {
   color: #323232; }
 
-a.wh, .wh > li > a {
+a.wh,
+.wh > li > a {
   color: #fff; }
 
 /* js */
@@ -341,27 +346,37 @@ nav#g-nav {
 
 /*voice
 -----------------------------------*/
-#voice .swiper-slide {
-  width: 80%;
-  margin: 0 auto;
-  background-color: #f5f5f5;
-  box-shadow: 0 0 3px #666; }
+#voice {
+  margin: 0 auto; }
+  #voice .swiper-voice-container {
+    width: 333px;
+    margin: 0 auto;
+    padding: 20px; }
+    @media screen and (min-width: 768px) {
+      #voice .swiper-voice-container {
+        width: 80%; } }
   #voice .swiper-slide img {
+    width: 210px;
     margin-bottom: 30px; }
     @media screen and (min-width: 768px) {
       #voice .swiper-slide img {
         width: 25%; } }
-#voice .wrap {
-  padding: 25px 20px 30px; }
-  @media screen and (min-width: 768px) {
-    #voice .wrap {
-      justify-content: space-between;
-      align-items: center; } }
-#voice .right {
-  text-align: right; }
-@media screen and (min-width: 768px) {
+  #voice .wrap {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 3px #666;
+    background-color: #f5f5f5; }
+    @media screen and (min-width: 768px) {
+      #voice .wrap {
+        justify-content: space-between;
+        align-items: center; } }
+  #voice .right {
+    text-align: right; }
   #voice .txt {
-    margin-left: 40px; } }
+    text-align: left; }
+    @media screen and (min-width: 768px) {
+      #voice .txt {
+        margin-left: 40px; } }
 
 /*entry-----------------------------------*/
 #entry .item {

@@ -1,5 +1,5 @@
 <footer class="tcenter">
-<div id="topBtn"><a href="#" class="wh">⬆︎</a></div>
+  <div id="topBtn"><a href="#" class="wh">⬆︎</a></div>
   <div class="inner">
     <ul class="f-nav pc-flex bold bl mb20">
       <li><a href="#">ホーム</a></li>
@@ -24,7 +24,7 @@
 <?php wp_footer(); ?>
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script>
-    //    top
+  //    top
   $(function() {
     $('#topBtn').on('click', function() {
       $('html,body').animate({
@@ -34,28 +34,25 @@
     });
   });
 
-        $(function() {
-          $('.menubox').on('click', function() {
-            $('#g-nav').toggleClass('click');
-          });
-        });
-
-
+  $(function() {
+    $('.menubox').on('click', function() {
+      $('#g-nav').toggleClass('click');
+    });
+  });
 
   let slider1 = new Swiper('.swiper-voice-container', {
-  speed: 1000,
-  autoplay: {
-  delay: 5000,
-  },
-  spaceBetween: 60,
-  navigation: {
-  nextEl: '.swiper-button-next',
-  prevEl: '.swiper-button-prev',
-  },
-  loop: true,
-
-  // autoplay: true,
-  autoplay: false,
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+    },
+    spaceBetween: 60,
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+    loop: true,
+//     autoplay: true,
+    autoplay: false,
   });
 </script>
 

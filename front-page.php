@@ -52,7 +52,7 @@
             <!--inner-->
           </div>
           <!--.swiper-slide-->
-                    <div class="swiper-slide">
+          <div class="swiper-slide">
             <div class="wrap pc-flex">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
               <div class="txt">
@@ -63,7 +63,7 @@
             <!--inner-->
           </div>
           <!--.swiper-slide-->
-                    <div class="swiper-slide">
+          <div class="swiper-slide">
             <div class="wrap pc-flex">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
               <div class="txt">
@@ -76,8 +76,7 @@
           <!--.swiper-slide-->
         </div>
         <!--swiper-wrapper-->
-            <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+<!--        <div class="swiper-pagination"></div>-->
       </div>
       <!--swiper-container-->
 
@@ -136,7 +135,7 @@
     <div class="items">
       <div class="cp_qa mb30">
 
-         <div class="cp_actab ">
+        <div class="cp_actab ">
           <input id="qa_1" type="checkbox" name="tabs">
           <label for="qa_1">Q1.ホメポジはいつ開催されますか？</label>
           <div class="cp_actab-content">
