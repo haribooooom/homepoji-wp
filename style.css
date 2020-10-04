@@ -142,7 +142,8 @@ a.wh, .wh > li > a {
 /*float*/
 .float {
   z-index: 999;
-  bottom: 0; }
+  bottom: 0;
+  box-shadow: 0 0 3px #323232; }
   @media screen and (min-width: 768px) {
     .float {
       top: 25%;
@@ -190,7 +191,8 @@ a.wh, .wh > li > a {
   width: 100%;
   background-color: #FDE458;
   height: 80px;
-  z-index: 999; }
+  z-index: 999;
+  box-shadow: 0 0 3px #323232; }
   @media screen and (min-width: 768px) {
     .header .h-wrap {
       padding: 10px; } }

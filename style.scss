@@ -185,7 +185,8 @@ a.wh,.wh>li>a{
 .float {
   z-index: 999;
   bottom: 0;
-
+  @include shadow {
+}
   @include mq-tablet {
     top:25%;
     right: 0;
@@ -253,6 +254,8 @@ width: 100%;
   background-color: $main;
   height: 80px;
   z-index: 999;
+    @include shadow {
+}
   .h-wrap{
       @include mq-tablet {
         padding: 10px;
