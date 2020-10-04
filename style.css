@@ -309,7 +309,7 @@ nav#g-nav {
 
 /*fv-----------------------------------*/
 #fv {
-  height: 80vh;
+  height: 70vh;
   background-image: url(./assets/img/fv.png);
   background-attachment: fixed;
   overflow: hidden;
@@ -365,18 +365,18 @@ nav#g-nav {
   @media screen and (min-width: 768px) {
     #about {
       padding: 30px 100px; } }
-  #about .about__inner {
+  #about .inner {
     background-color: #fff; }
     @media screen and (min-width: 768px) {
-      #about .about__inner {
+      #about .inner {
         padding: 20px; } }
-  #about .about__wrap {
+  #about .wrap {
     position: relative;
     background-image: url(assets/img/il_mes_love.png);
     background-position: center;
     background-size: contain; }
     @media screen and (min-width: 768px) {
-      #about .about__wrap {
+      #about .wrap {
         background-position: right; } }
   #about img {
     display: none;
