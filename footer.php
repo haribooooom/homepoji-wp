@@ -51,8 +51,8 @@
         dynamicBullets: true,
       },
     loop: true,
-//     autoplay: true,
-    autoplay: false,
+     autoplay: true,
+//    autoplay: false,
   });
 </script>
 

@@ -76,10 +76,8 @@
           <!--.swiper-slide-->
         </div>
         <!--swiper-wrapper-->
-<!--        <div class="swiper-pagination"></div>-->
       </div>
       <!--swiper-container-->
-
     </div>
     <!--voice-wrap-->
 
@@ -185,7 +183,7 @@
 
     <div class="txt tcenter mb30">
       <p><span class="bold">ホメポジ</span>に参加して</p>
-      <p>ちょっと自分が<br><span class="red">スキ</span><br>になる</p>
+      <strong class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</strong>
       <p>あなたのご参加をお待ちしております！</p>
     </div>
     <!--f-mes__box-->
