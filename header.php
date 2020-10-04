@@ -53,17 +53,17 @@
       </div>
       </div>
 
-    <div class="send flex fix bold tcenter">
+    <div class="float flex fix bold tcenter">
       <div class="tw-share">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i>シェアする</a>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false" class="pc-flex"><i class="fa fa-twitter" aria-hidden="true"></i>シェア</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <!--share-->
       <div class="recrut">
         <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>">
-          <i class="fa fa-envelope"></i>応募する</a>
+          <i class="fa fa-envelope"></i>応募</a>
       </div>
     </div>
-    <!--send-->
+    <!--float-->
   </header>
   <!--header-->

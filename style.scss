@@ -37,6 +37,10 @@ $shadow:0 0 3px $bl;
   }
 }
 
+@mixin shadow($color:$bl) {
+  box-shadow: 0 0 3px $color;
+}
+
 //レイアウト
 /* トップページのメニュー */
 body>div:nth-of-type(2n) {
@@ -176,27 +180,30 @@ a.wh,.wh>li>a{
 
 /*header
 -----------------------------------* /
-/*send*/
+/*float*/
 
-.send {
+.float {
   z-index: 999;
-
+bottom: 0;
   @include mq-tablet {
-    width: 200px;
-    top:80px;
-    right: 5%;
+    top:25%;
+    right: 0;
+    bottom: auto;
     flex-direction: column;
   }
 
   .fa {
     margin-right: 1rem;
+      @include mq-tablet {
+    display: block;
+    }
   }
 
   div {
     width: 50vw;
-    box-shadow: $shadow;
     @include mq-tablet {
-    width: 25vw;
+    width: 120px;
+      height: 120px;
     }
   }
 
@@ -205,13 +212,13 @@ a.wh,.wh>li>a{
     display: block;
     font-size: 2rem;
     color: $wh;
+      @include mq-tablet {
+      flex-direction: column;
+    }
   }
 
   .tw-share {
     background-color: $tw-color;
-
-    @include mq-tablet {
-    }
   }
   .recrut {
     background-color: #fd5858;
