@@ -110,8 +110,8 @@
 
     <h2>ホメポジQ&amp;A</h2>
 
-    <div class="items mb40">
-      <div class="cp_qa">
+    <div class="items">
+      <div class="cp_qa mb30">
 
          <div class="cp_actab ">
           <input id="qa_1" type="checkbox" name="tabs">
@@ -147,7 +147,7 @@
     <!--items-->
 
     <div class="btn__items tcenter">
-      <p class="mb30">その他ご質問等ございましたら、<br>
+      <p>その他ご質問等ございましたら、<br>
         <a href="#">ホメポジ公式アカウント</a>までご連絡ください。
       </p>
 
@@ -161,9 +161,9 @@
 <div id="f-mes">
   <div class="inner">
 
-    <div class="txt tcenter">
-      <p class="mes"><span class="bold">ホメポジ</span>に参加して</p>
-      <p class="mes">ちょっと自分が<br><span class="red">スキ</span><br>になる</p>
+    <div class="txt tcenter mb30">
+      <p><span class="bold">ホメポジ</span>に参加して</p>
+      <p>ちょっと自分が<br><span class="red">スキ</span><br>になる</p>
       <p>あなたのご参加をお待ちしております！</p>
     </div>
     <!--f-mes__box-->
