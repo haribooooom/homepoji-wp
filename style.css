@@ -156,10 +156,12 @@ a.wh, .wh > li > a {
         width: 100px;
         height: 100px; } }
   .float a {
-    height: 100px;
     padding: 12px;
     display: block;
     font-size: 1.8rem; }
+    @media screen and (min-width: 768px) {
+      .float a {
+        height: 100px; } }
   .float .tw-share {
     background-color: #2c94e0; }
     .float .tw-share span::after {

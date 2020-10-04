@@ -202,10 +202,12 @@ a.wh,.wh>li>a{
   }
 
   a {
-      height: 100px;
     padding: 12px;
     display: block;
     font-size: 1.8rem;
+      @include mq-tablet {
+      height: 100px;
+    }
   }
 
   .tw-share {
