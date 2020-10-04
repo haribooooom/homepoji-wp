@@ -3,7 +3,7 @@
   <div id="fv" class="bg-img bg">
 
       <div class="box tcenter js-anime">
-      <strong class="txt">ちょっと自分が<span class="red">スキ</span>になる！</strong><strong >ようこそ、<span>ホメポジ</span>へ！</strong></div>
+      <strong class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</strong><strong >ようこそ、<span>ホメポジ</span>へ！</strong></div>
       <!--box-->
       <img class="js-anime" src="<?php echo get_template_directory_uri(); ?>/assets/img/il_fv_having_fun.png">
 

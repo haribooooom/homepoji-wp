@@ -122,7 +122,7 @@ a.wh, .wh > li > a {
   font-size: 1.6rem;
   background-color: #FDE458;
   color: #323232;
-  box-shadow: 0 0 3px #323232;
+  box-shadow: 0 0 3px #666;
   transition: 1s; }
   @media screen and (min-width: 768px) {
     .btn a {
@@ -143,7 +143,7 @@ a.wh, .wh > li > a {
 .float {
   z-index: 999;
   bottom: 0;
-  box-shadow: 0 0 3px #323232; }
+  box-shadow: 0 0 3px #666; }
   @media screen and (min-width: 768px) {
     .float {
       top: 25%;
@@ -192,7 +192,7 @@ a.wh, .wh > li > a {
   background-color: #FDE458;
   height: 80px;
   z-index: 999;
-  box-shadow: 0 0 3px #323232; }
+  box-shadow: 0 0 3px #666; }
   @media screen and (min-width: 768px) {
     .header .h-wrap {
       padding: 10px; } }
@@ -276,7 +276,7 @@ nav#g-nav {
           padding: 0px;
           background-color: transparent; } }
       nav#g-nav ul li a:hover {
-        color: #fff; }
+        opacity: 0.8; }
     nav#g-nav ul li:nth-last-of-type(1) {
       border-bottom: none; }
   nav#g-nav.click {
@@ -307,10 +307,11 @@ nav#g-nav {
     right: 0px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.8);
-    z-index: 99; }
+    z-index: 99;
+    box-shadow: 0 0 3px #eee; }
     @media screen and (min-width: 768px) {
       #fv .box {
-        width: 70%;
+        width: 50%;
         top: 50%; } }
     #fv .box strong {
       margin-bottom: 0; }
@@ -333,7 +334,7 @@ nav#g-nav {
         padding: 50px; } }
   #about .bg-img {
     position: relative;
-    background-image: url(assets/img/il_mes_love.png); }
+    background-image: url(./assets/img/il_mes_love.png); }
     @media screen and (min-width: 768px) {
       #about .bg-img {
         background-position: right; } }
@@ -355,7 +356,7 @@ nav#g-nav {
   position: relative;
   transition-property: transform;
   background-color: #f5f5f5;
-  box-shadow: 0 0 3px #323232; }
+  box-shadow: 0 0 3px #666; }
   #voice .swiper-slide img {
     width: 70%;
     margin-bottom: 20px; }
@@ -364,7 +365,7 @@ nav#g-nav {
   .swiper-voice-container,
   .voice-right {
     width: calc((100%/2) - 20px); } }
-/*way-----------------------------------*/
+/*entry-----------------------------------*/
 #entry .item {
   margin: 0 auto;
   text-align: center;
@@ -379,26 +380,29 @@ nav#g-nav {
   #entry .item img {
     margin-bottom: 20px;
     border-radius: 50%;
-    box-shadow: 0 0 3px #323232; }
+    box-shadow: 0 0 3px #e7e7e7; }
 
 /*attention
 -----------------------------------*/
-@media screen and (min-width: 768px) {
+#attention .inner {
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    #attention .inner {
+      width: 60%; } }
+  @media screen and (min-width: 768px) {
+    #attention .inner {
+      width: 80%; } }
+@media screen and (min-width: 960px) {
   #attention img {
     display: none; } }
-#attention .bg-img {
-  margin: 0 auto;
-  padding: 20px;
-  border: 10px solid #fafafa;
-  border-radius: 10px; }
-  @media screen and (min-width: 768px) {
-    #attention .bg-img {
-      width: 100%;
-      height: 60vh;
-      padding: 40px 60px;
-      background-image: url(assets/img/il_caution_warning.png);
-      background-position: right;
-      background-size: 60%; } }
+@media screen and (min-width: 960px) {
+  #attention .bg-img {
+    width: 100%;
+    height: 60vh;
+    padding: 40px 0;
+    background-image: url(./assets/img/il_caution_warning.png);
+    background-position: right;
+    background-size: 60%; } }
 
 /*QA-----------------------------------*/
 #qa .items {
@@ -576,10 +580,10 @@ small {
     margin-top: 5px;
     padding: 1.5%;
     width: 100%;
-    box-shadow: 0 0 3px 0 0 3px #323232;
     box-sizing: border-box;
     border: 1px solid #f3f3f3;
-    resize: none; }
+    resize: none;
+    box-shadow: 0 0 3px #e7e7e7; }
   .wpcf7 input[type="submit"] {
     width: 200px;
     padding: 10px;
@@ -598,7 +602,7 @@ textarea {
   margin-top: 5px;
   padding: 1%;
   width: 100%;
-  box-shadow: 0 0 3px #323232;
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
-  resize: none; }
+  resize: none;
+  box-shadow: 0 0 3px #e7e7e7; }
