@@ -42,6 +42,9 @@ body > div:nth-of-type(2n) {
     .inner {
       max-width: 960px; } }
 
+.fix {
+  position: fixed; }
+
 .flex {
   display: flex; }
 
@@ -64,7 +67,7 @@ body > div:nth-of-type(2n) {
   background-position: center; }
 
 .bold {
-  font-weight: bold; }
+  font-weight: 600; }
 
 strong {
   display: block;
@@ -85,10 +88,15 @@ h2 {
   font-weight: 600;
   font-style: normal; }
 
-p {
+p, a, li, li a {
   font-size: 1.6rem;
-  line-height: 2;
-  margin-bottom: 20px; }
+  line-height: 2; }
+
+a.bl, .bl > li > a {
+  color: #323232; }
+
+a.wh, .wh > a {
+  color: #fff; }
 
 /* js */
 .js-anime {
@@ -131,16 +139,13 @@ p {
 -----------------------------------* /
 /*send*/
 .send {
-  height: 60px;
   bottom: 0;
   z-index: 999; }
   @media screen and (min-width: 768px) {
     .send {
-      width: 25%;
+      width: 200px;
       top: 80px;
       right: 0;
-      bottom: 160px;
-      height: 40px;
       flex-direction: column; } }
   .send .fa {
     margin-right: 1rem; }
@@ -151,9 +156,8 @@ p {
       .send div {
         width: 25vw; } }
   .send a {
-    padding: 20px 0;
+    padding: 16px;
     display: block;
-    text-align: center;
     font-size: 2rem;
     color: #fff; }
   .send .tw-share {
@@ -178,7 +182,7 @@ p {
     justify-content: space-between;
     align-items: center; }
 
-.logo, footer .logo {
+.logo {
   width: 60px;
   margin-left: 20px; }
 
@@ -254,6 +258,7 @@ nav#g-nav {
       color: #fff;
       padding: 20px;
       font-size: 1.6rem;
+      font-weight: 600;
       background-color: rgba(0, 0, 0, 0.6); }
       @media screen and (min-width: 768px) {
         nav#g-nav ul li a {
@@ -261,7 +266,7 @@ nav#g-nav {
           padding: 0px;
           background-color: transparent; } }
       nav#g-nav ul li a:hover {
-        background-color: rgba(0, 0, 0, 0.4); }
+        color: #fff; }
     nav#g-nav ul li:nth-last-of-type(1) {
       border-bottom: none; }
   nav#g-nav.click {
@@ -485,57 +490,41 @@ nav#g-nav {
   .f-mes .txt p:last-of-type {
     margin-bottom: 60px; }
 
+/*footer
+-----------------------------------*/
 /*top
 -----------------------------------*/
 #topBtn {
   width: 100%;
-  text-align: center;
   background-color: #323232; }
+  #topBtn:hover {
+    opacity: 0.8; }
   #topBtn a {
     font-size: 2rem;
-    display: block;
-    padding: 20px 0;
-    color: #fff; }
-    #topBtn a:hover {
-      opacity: 0.8; }
+    display: block; }
 
-/*footer
------------------------------------*/
 footer {
-  text-align: center;
-  padding-bottom: 14px;
   background-color: #FDE458; }
   footer .inner {
-    padding: 20px 20px 60px;
+    padding: 20px 20px 90px;
     justify-content: space-between;
     flex-wrap: wrap; }
     @media screen and (min-width: 768px) {
       footer .inner {
-        padding: 40px; } }
+        padding: 20px; } }
+  footer .sns {
+    font-size: 2rem; }
+    footer .sns i {
+      font-size: 5rem;
+      margin-right: 1rem; }
+  @media screen and (min-width: 768px) {
+    footer a:hover {
+      opacity: 0.8; } }
 
 @media screen and (min-width: 768px) {
   .f-nav {
-    justify-content: space-between;
-    margin-bottom: 30px; } }
-.f-nav li {
-  margin-left: 0;
-  list-style: none; }
-  @media screen and (min-width: 768px) {
-    .f-nav li {
-      margin-bottom: 0;
-      margin-left: 0; }
-      .f-nav li:last-of-type a {
-        border-right: none; } }
-  .f-nav li a {
-    line-height: 1.6;
-    padding: 10px;
-    color: #323232; }
-    @media screen and (min-width: 768px) {
-      .f-nav li a {
-        font-size: 1rem;
-        display: block;
-        padding: 0 10px;
-        border-right: 1px solid #323232; } }
+    margin-bottom: 30px;
+    justify-content: space-between; } }
 
 small {
   width: 100%; }

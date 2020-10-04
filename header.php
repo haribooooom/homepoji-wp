@@ -26,7 +26,7 @@
 <body <?php body_class(); ?>>
 
   <header>
-    <div class="header">
+    <div class="header fix">
      <div class="h-wrap">
       <div class="flex">
         <div class="logo">
@@ -38,7 +38,8 @@
           <span class="bar"></span>
         </div>
         <!--flex-->
-        <nav id="g-nav">
+        <nav id="g-nav" class="t
+          bold">
           <ul class="flex">
             <li><a href="#">TOP</a></li>
             <li><a href="#about">ホメポジとは</a></li>
@@ -52,7 +53,7 @@
       </div>
       </div>
 
-    <div class="send flex fix">
+    <div class="send flex fix bold tcenter">
       <div class="tw-share">
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fa fa-twitter" aria-hidden="true"></i>シェアする</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

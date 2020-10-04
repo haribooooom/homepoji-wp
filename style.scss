@@ -55,6 +55,10 @@ overflow: hidden;
 
 //flex
 
+.fix{
+  position: fixed;
+}
+
 .flex {
   display: flex;
 }
@@ -70,13 +74,10 @@ overflow: hidden;
 }
 
 .center{
-//    top: 0px;
     left: 0px;
-//    bottom: 0px;
     right: 0px;
     margin: 0 auto;
 }
-
 
 /*bg*/
 .bg {
@@ -87,7 +88,7 @@ overflow: hidden;
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 strong {
@@ -112,10 +113,18 @@ h2 {
   font-style: normal;
 }
 
-p {
+p,a,li,li a {
   font-size: 1.6rem;
   line-height: 2;
-  margin-bottom: 20px;
+//  margin-bottom: 12px;
+}
+
+a.bl,.bl>li>a{
+  color: $bl;
+}
+
+a.wh,.wh>a{
+  color: $wh;
 }
 
 /* js */
@@ -170,16 +179,13 @@ p {
 /*send*/
 
 .send {
-  height: 60px;
   bottom: 0;
   z-index: 999;
 
   @include mq-tablet {
-    width: 25%;
+    width: 200px;
     top:80px;
     right: 0;
-    bottom: 160px;
-    height: 40px;
     flex-direction: column;
   }
 
@@ -196,14 +202,10 @@ p {
   }
 
   a {
-    padding: 20px 0;
+    padding: 16px;
     display: block;
-    text-align: center;
     font-size: 2rem;
     color: $wh;
-      @include mq-tablet {
-//        padding: 20px;
-    }
   }
 
   .tw-share {
@@ -332,6 +334,7 @@ nav#g-nav {
       color: $wh;
       padding: 20px;
       font-size: 1.6rem;
+      font-weight: 600;
       background-color: rgba(0, 0, 0, 0.6);
 
       @include mq-tablet {
@@ -341,7 +344,7 @@ nav#g-nav {
       }
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.4);
+        color: $wh;
       }
     }
 
@@ -679,80 +682,57 @@ nav#g-nav {
   }
 }
 
+/*footer
+-----------------------------------*/
+
 /*top
 -----------------------------------*/
 #topBtn {
   width: 100%;
-  text-align: center;
   background-color: $bl;
+    &:hover {
+      opacity: 0.8;
+    }
 
   a {
     font-size: 2rem;
     display: block;
-    padding: 20px 0;
-    color: $wh;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }
 
-/*footer
------------------------------------*/
 footer {
-  text-align: center;
-  padding-bottom: 14px;
   background-color: $main;
-
-  .logo {
-    @extend .logo;
-  }
-
   .inner {
-    padding: 20px 20px 60px;
+    padding: 20px 20px 90px;
     justify-content: space-between;
     flex-wrap: wrap;
-
     @include mq-tablet {
-      padding: 40px;
+      padding:20px;
     }
   }
+
+  .sns{
+    font-size: 2rem;
+    i{
+      font-size: 5rem;
+      margin-right: 1rem;
+    }
+  }
+  @include mq-tablet {
+  a:hover{
+         opacity: 0.8;
+  }
+}
 }
 
 .f-nav {
   @include mq-tablet {
-    justify-content: space-between;
     margin-bottom: 30px;
+    justify-content: space-between;
   }
 
-  li {
-    margin-left: 0;
-    list-style: none;
-
-    @include mq-tablet {
-      margin-bottom: 0;
-      margin-left: 0;
-
-      &:last-of-type a {
-        border-right: none;
       }
 
-    }
-      a {
-        line-height: 1.6;
-        padding: 10px;
-        color: $bl;
-
-        @include mq-tablet {
-          font-size: 1rem;
-          display: block;
-          padding: 0 10px;
-          border-right: 1px solid $bl;
-        }
-      }
-  }
-}
 
 small {
   width: 100%;
