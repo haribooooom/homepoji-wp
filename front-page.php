@@ -36,28 +36,48 @@
 <div id="voice">
   <div class="inner">
 
-    <h2>参加した人の声</h2>
-    <div class="wrap pc-flex">
+    <h2>参加者の声</h2>
+    <div class="pc-flex">
 
       <div class="swiper-voice-container mb20">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/il_way_conf.png" alt="">
-            <div class="txt">
-              <p>（ルイさん）</p>
-              <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+          <div class="swiper-slide">
+            <div class="wrap pc-flex">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <div class="txt">
+                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+                <p class="right">（ルイさん）</p>
+              </div>
             </div>
-            <!--box-->
+            <!--inner-->
+          </div>
+          <!--.swiper-slide-->
+          <div class="swiper-slide">
+            <div class="wrap pc-flex">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <div class="txt">
+                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+                <p class="right">（ルイさん）</p>
+              </div>
+            </div>
+            <!--inner-->
+          </div>
+          <!--.swiper-slide-->
+          <div class="swiper-slide">
+            <div class="wrap pc-flex">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <div class="txt">
+                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
+                <p class="right">（ルイさん）</p>
+              </div>
+            </div>
+            <!--inner-->
           </div>
           <!--.swiper-slide-->
         </div>
         <!--swiper-wrapper-->
       </div>
       <!--swiper-container-->
-
-      <div class="box">
-        <div class="txt">何かしらのいい感じの言葉</div>
-      </div>
-
     </div>
     <!--voice-wrap-->
 
@@ -87,7 +107,7 @@
 </div>
 <div id="attention">
   <div class="inner">
-    <h2>参加上の注意事項</h2>
+    <h2>注意事項</h2>
     <div class="bg-img bg">
       <ul class="mb40">
         <li class="js-anime">相手をけなしたりバカにすること</li>
@@ -113,7 +133,7 @@
     <div class="items">
       <div class="cp_qa mb30">
 
-         <div class="cp_actab ">
+        <div class="cp_actab ">
           <input id="qa_1" type="checkbox" name="tabs">
           <label for="qa_1">Q1.ホメポジはいつ開催されますか？</label>
           <div class="cp_actab-content">
@@ -163,21 +183,10 @@
 
     <div class="txt tcenter mb30">
       <p><span class="bold">ホメポジ</span>に参加して</p>
-      <p>ちょっと自分が<br><span class="red">スキ</span><br>になる</p>
+      <strong class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</strong>
       <p>あなたのご参加をお待ちしております！</p>
     </div>
     <!--f-mes__box-->
-
-    <div class="swiper-fmes-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/00.jpg" alt="">
-        </div>
-        <!--swiper-slide-->
-      </div>
-      <!--swiper-wrapper-->
-    </div>
-    <!--swiper-container-->
 
   </div>
   <!--inner-->

@@ -44,14 +44,15 @@ $img:"./assets/img";
 
 //レイアウト
 /* トップページのメニュー */
-body>div:nth-of-type(2n) {
+body > div:nth-of-type(2n) {
   background-color: $pwh;
 }
 
-.inner{
+.inner {
   margin: 0 auto;
   padding: 50px 20px;
-overflow: hidden;
+  overflow: hidden;
+
   @include mq-pc {
     max-width: 960px;
   }
@@ -61,7 +62,7 @@ overflow: hidden;
 
 //flex
 
-.fix{
+.fix {
   position: fixed;
 }
 
@@ -75,14 +76,14 @@ overflow: hidden;
   }
 }
 
-.tcenter{
+.tcenter {
   text-align: center;
 }
 
-.center{
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
+.center {
+  left: 0px;
+  right: 0px;
+  margin: 0 auto;
 }
 
 /*bg*/
@@ -119,20 +120,25 @@ h2 {
   font-style: normal;
 }
 
-p,a,li,li a {
+p,
+a,
+li,
+li a {
   font-size: 1.6rem;
   line-height: 2;
 }
 
-a.bl,.bl>li>a{
+a.bl,
+.bl > li > a {
   color: $bl;
 }
 
-a.wh,.wh>li>a{
+a.wh,
+.wh > li > a {
   color: $wh;
 }
 
-/* js */
+/* animation */
 .js-anime {
   opacity: 0;
   visibility: hidden;
@@ -146,7 +152,9 @@ a.wh,.wh>li>a{
   }
 }
 
-
+#g-nav > ul> .current>a{
+  color: blue;
+}
 
 /*btn*/
 .btn a {
@@ -159,7 +167,9 @@ a.wh,.wh>li>a{
   font-size: 1.6rem;
   background-color: $main;
   color: $bl;
-    @include shadow { }
+
+  @include shadow {}
+
   transition: 1s;
 
   @include mq-tablet {
@@ -186,10 +196,11 @@ a.wh,.wh>li>a{
 .float {
   z-index: 999;
   bottom: 0;
-  @include shadow {
-}
+
+  @include shadow {}
+
   @include mq-tablet {
-    top:25%;
+    top: 25%;
     right: 0;
     bottom: auto;
     flex-direction: column;
@@ -197,8 +208,9 @@ a.wh,.wh>li>a{
 
   div {
     width: 50vw;
+
     @include mq-tablet {
-    width: 100px;
+      width: 100px;
       height: 100px;
     }
   }
@@ -207,7 +219,8 @@ a.wh,.wh>li>a{
     padding: 12px;
     display: block;
     font-size: 1.8rem;
-      @include mq-tablet {
+
+    @include mq-tablet {
       height: 100px;
     }
   }
@@ -236,30 +249,32 @@ a.wh,.wh>li>a{
     }
   }
 
-    .fa {
+  .fa {
     margin-right: 1rem;
-      @include mq-tablet {
-        margin: 0;
-        margin-top: 5px;
-       display: block;
-       font-size: 3.5rem;
+
+    @include mq-tablet {
+      margin: 0;
+      margin-top: 5px;
+      display: block;
+      font-size: 3.5rem;
     }
   }
 
 
-  }
+}
 
 /*header-----------------------------------*/
 .header {
-width: 100%;
+  width: 100%;
   background-color: $main;
   height: 80px;
   z-index: 999;
-    @include shadow {
-}
-  .h-wrap{
-      @include mq-tablet {
-        padding: 10px;
+
+  @include shadow {}
+
+  .h-wrap {
+    @include mq-tablet {
+      padding: 10px;
     }
   }
 
@@ -384,11 +399,11 @@ nav#g-nav {
   z-index: -9999;
   overflow: hidden;
 
-  &.bg-img{
-  position: relative;
-  background-image: url(#{$img}/fv.png);
-  background-attachment: fixed;
-  background-size: cover;
+  &.bg-img {
+    position: relative;
+    background-image: url(#{$img}/fv.png);
+    background-attachment: fixed;
+    background-size: cover;
   }
 
 
@@ -410,8 +425,8 @@ nav#g-nav {
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.8);
     z-index: 99;
-      @include  shadow(#eee){
-    }
+
+    @include shadow(#eee) {}
 
     @include mq-tablet {
       width: 50%;
@@ -440,19 +455,20 @@ nav#g-nav {
   padding: 30px 20px;
 
   .inner {
-      background-color: $wh;
-      @include mq-tablet {
-        padding: 50px;
-      }
+    background-color: $wh;
+
+    @include mq-tablet {
+      padding: 50px;
+    }
   }
 
   .bg-img {
-      position: relative;
-      background-image: url(#{$img}/il_mes_love.png);
+    position: relative;
+    background-image: url(#{$img}/il_mes_love.png);
 
-      @include mq-tablet {
-        background-position: right;
-      }
+    @include mq-tablet {
+      background-position: right;
+    }
   }
 
 }
@@ -461,47 +477,51 @@ nav#g-nav {
 -----------------------------------*/
 
 #voice {
-.pc-flex {
+  margin: 0 auto;
+
+  .swiper-voice-container {
+    width: 333px;
+    margin: 0 auto;
+    padding: 20px;
+
     @include mq-tablet {
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-}
-  .inner {
-    padding: 50px;
+      width: 80%;
+    }
   }
 
-  .swiper {
-    &-voice-container {
+  .swiper-slide {
+    img {
+      width: 210px;
+      margin-bottom: 30px;
+
       @include mq-tablet {
-        overflow: hidden;
+        width: 25%;
       }
     }
+  }
 
-    &-slide {
-      padding: 25px;
-      text-align: center;
-      position: relative;
-      transition-property: transform;
-      background-color: #f5f5f5;
-
-      @include shadow {}
-
-      img {
-        margin-bottom: 20px;
-      }
+  .wrap {
+    padding: 20px;
+    text-align: center;
+    @include shadow {}
+    background-color: #f5f5f5;
+    @include mq-tablet {
+      justify-content: space-between;
+      align-items: center;
     }
+  }
+  .right {
+    text-align: right;
+  }
+  .txt {
+    text-align: left;
 
+    @include mq-tablet {
+      margin-left: 40px;
+    }
   }
 
 }
-
-@include mq-tablet {
-    .swiper-voice-container,
-    .voice-right {
-      width: calc((100%/2) - 20px);
-    }
-  }
 
 /*entry-----------------------------------*/
 #entry {
@@ -521,7 +541,8 @@ nav#g-nav {
     img {
       margin-bottom: 20px;
       border-radius: 50%;
-        @include shadow(#e7e7e7) { }
+
+      @include shadow(#e7e7e7) {}
     }
 
   }
@@ -531,7 +552,8 @@ nav#g-nav {
 -----------------------------------*/
 #attention {
   .inner {
-      margin: 0 auto;
+    margin: 0 auto;
+
     @include mq-tablet {
       width: 60%;
     }
@@ -561,117 +583,118 @@ nav#g-nav {
 
 /*QA-----------------------------------*/
 
-#qa{
+#qa {
 
-.items {
-  margin: 0 auto;
+  .items {
+    margin: 0 auto;
 
-  @include mq-tablet {
-    width: 80%;
-  }
-}
-
-.cp_qa *,
-.cp_qa *:after,
-.cp_qa *:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.cp_qa .cp_actab {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 20px;
-  color: $sub;
-
-  input {
-    position: absolute;
-    opacity: 0;
-
-    /* 質問を開いた時の仕様 */
-    /* --答えの高さ */
-    &:checked ~ .cp_actab-content {
-      max-height: 40em;
-      border: 10px solid $wh;
+    @include mq-tablet {
+      width: 80%;
     }
-
-    /* 質問をクリックした時のアイコンの動き */
-    &:checked ~ label {
-      color: $sub;
-      border-radius: 0.5em 0.5em 0 0;
-    }
-
   }
 
-  label {
-    margin: 0 0 0 0;
-    padding: 1em;
+  .cp_qa *,
+  .cp_qa *:after,
+  .cp_qa *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .cp_qa .cp_actab {
     position: relative;
-    display: block;
-    border-radius: 3px;
-    font-size: 1.6rem;
-    line-height: 2;
-    font-weight: bold;
-    background: $main;
-    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+    color: $sub;
 
-    &::before {
-      font-family: serif;
-      font-size: 1.5em;
-      margin-left: -2em;
-      padding-right: 0.5em;
+    input {
+      position: absolute;
+      opacity: 0;
+
+      /* 質問を開いた時の仕様 */
+      /* --答えの高さ */
+      &:checked ~ .cp_actab-content {
+        max-height: 40em;
+        border: 10px solid $wh;
+      }
+
+      /* 質問をクリックした時のアイコンの動き */
+      &:checked ~ label {
+        color: $sub;
+        border-radius: 0.5em 0.5em 0 0;
+      }
+
     }
 
-    &:hover {
-      transition: all 0.3s;
-      color: $sub;
-    }
-
-    &::after {
-      margin-left: 2rem;
-      font-size: 1em;
+    label {
+      margin: 0 0 0 0;
+      padding: 1em;
+      position: relative;
+      display: block;
+      border-radius: 3px;
+      font-size: 1.6rem;
+      line-height: 2;
       font-weight: bold;
-      line-height: 1.4em;
-      content: '▼';
-      display: inline-block;
-      -webkit-transition: transform 0.5s;
-      transition: transform 0.5s;
+      background: $main;
+      cursor: pointer;
+
+      &::before {
+        font-family: serif;
+        font-size: 1.5em;
+        margin-left: -2em;
+        padding-right: 0.5em;
+      }
+
+      &:hover {
+        transition: all 0.3s;
+        color: $sub;
+      }
+
+      &::after {
+        margin-left: 2rem;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1.4em;
+        content: '▼';
+        display: inline-block;
+        -webkit-transition: transform 0.5s;
+        transition: transform 0.5s;
+
         @include mq-tablet {
           position: absolute;
           right: 1.2em;
-          top:1em;
+          top: 1em;
+        }
       }
     }
-  }
 
-  /* --質問の＋アイコン */
-  /* 答え */
-  .cp_actab-content {
-    position: relative;
-    overflow: hidden;
-    max-height: 0;
-    padding: 0 1em;
-    -webkit-transition: max-height 0.2s;
-    transition: max-height 0.2s;
-    border-radius: 0 0 0.5em 0.5em;
-    background-color: $wh;
+    /* --質問の＋アイコン */
+    /* 答え */
+    .cp_actab-content {
+      position: relative;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0 1em;
+      -webkit-transition: max-height 0.2s;
+      transition: max-height 0.2s;
+      border-radius: 0 0 0.5em 0.5em;
+      background-color: $wh;
 
-    &::before {
-      font-family: serif;
-      font-size: 1.5em;
-      position: absolute;
-      margin: 0.4em 0 0 -1em;
-      padding: 0;
+      &::before {
+        font-family: serif;
+        font-size: 1.5em;
+        position: absolute;
+        margin: 0.4em 0 0 -1em;
+        padding: 0;
+      }
+
+      p {
+        margin: 1em 1em 1em 0;
+      }
+
     }
 
-    p {
-      margin: 1em 1em 1em 0;
-    }
-
   }
-
-}
 
 }
 
@@ -680,7 +703,7 @@ nav#g-nav {
 -----------------------------------*/
 .f-mes {
 
-  span.red{
+  span.red {
     font-size: 2rem;
   }
 
@@ -694,9 +717,10 @@ nav#g-nav {
 #topBtn {
   width: 100%;
   background-color: $bl;
-    &:hover {
-      opacity: 0.8;
-    }
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   a {
     font-size: 2rem;
@@ -706,27 +730,31 @@ nav#g-nav {
 
 footer {
   background-color: $main;
+
   .inner {
     padding: 20px 20px 90px;
     justify-content: space-between;
     flex-wrap: wrap;
+
     @include mq-tablet {
-      padding:20px;
+      padding: 20px;
     }
   }
 
-  .sns{
+  .sns {
     font-size: 2rem;
-    i{
+
+    i {
       font-size: 5rem;
       margin-right: 1rem;
     }
   }
+
   @include mq-tablet {
-  a:hover{
-         opacity: 0.8;
+    a:hover {
+      opacity: 0.8;
+    }
   }
-}
 }
 
 .f-nav {
@@ -735,7 +763,7 @@ footer {
     justify-content: space-between;
   }
 
-      }
+}
 
 
 small {
@@ -799,7 +827,8 @@ small {
       box-sizing: border-box;
       border: 1px solid #f3f3f3;
       resize: none;
-        @include shadow(#e7e7e7) { }
+
+      @include shadow(#e7e7e7) {}
     }
 
     &[type="submit"] {
@@ -831,9 +860,6 @@ textarea {
   box-sizing: border-box;
   border: 1px solid #f3f3f3;
   resize: none;
-    @include shadow(#e7e7e7) { }
+
+  @include shadow(#e7e7e7) {}
 }
-
-
-
-

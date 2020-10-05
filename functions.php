@@ -3,6 +3,7 @@
 //CSSとJSの読み込み
 
 function register_stylesheet() {
+  wp_register_style('swiper', get_template_directory_uri().'/assets/css/swiper.min.css');
   wp_register_style('reset', get_template_directory_uri().'/assets/css/reset.css');
   wp_register_style('style', get_template_directory_uri().'/style.css');
 }
@@ -11,17 +12,20 @@ function add_stylesheet() {
   register_stylesheet();
   wp_enqueue_style('reset', '', array(), '1.0', false);
   wp_enqueue_style('style', '', array(), '1.0', false);
+  wp_enqueue_style('swiper', '', array(), '1.0', false);
 }
 
 add_action('wp_enqueue_scripts', 'add_stylesheet');
 
 function register_script() {
+  wp_register_script('swiper', get_template_directory_uri().'/assets/js/swiper.min.js');
   wp_register_script('font', get_template_directory_uri().'/assets/js/font.js');
   wp_register_script('script', get_template_directory_uri().'/assets/js/main.js');
 }
 
 function add_script() {
   register_script();
+  wp_enqueue_script('swiper', '', array(), '1.0', true);
   wp_enqueue_script('script', '', array(), '1.0', true);
   wp_enqueue_script('font', '', array(), '1.0', true);
 }
