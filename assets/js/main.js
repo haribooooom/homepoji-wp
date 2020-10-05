@@ -50,16 +50,6 @@
       var pos05 = Math.round($("#attention").offset().top - 60);
       var pos06 = Math.round($("#qa").offset().top - 60);
 
-      $(window).on('load resize scroll', function () {
-        var posScroll = $(window).scrollTop();
-        if (pos01 <= posScroll && posScroll < pos02) {
-          $("#list01").addClass('current').siblings('li').removeClass('current');} else if (pos02 <= posScroll && posScroll < pos03) {
-          $("#list02").addClass('current').siblings('li').removeClass('current');} else if (pos03 <= posScroll && posScroll < pos04) {
-          $("#list03").addClass('current').siblings('li').removeClass('current');} else if (pos04 <= posScroll && posScroll < pos05) {
-          $("#list04").addClass('current').siblings('li').removeClass('current');} else if (pos05 <= posScroll && posScroll < pos06) {
-          $("#list05").addClass('current').siblings('li').removeClass('current');} else if (pos06 <= posScroll && posScroll) {
-          $("#list06").addClass('current').siblings('li').removeClass('current');}
-      });
     });
 
   });

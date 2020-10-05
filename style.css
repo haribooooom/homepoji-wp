@@ -116,9 +116,6 @@ a.wh,
     visibility: visible;
     transform: translateY(0px); }
 
-#g-nav > ul > .current > a {
-  color: blue; }
-
 /*btn*/
 .btn a {
   width: 80%;
@@ -198,12 +195,12 @@ a.wh,
 .header {
   width: 100%;
   background-color: #FDE458;
-  height: 80px;
+  height: 70px;
   z-index: 999;
   box-shadow: 0 0 3px #666; }
   @media screen and (min-width: 768px) {
     .header .h-wrap {
-      padding: 10px; } }
+      padding: 5px; } }
   .header .flex {
     justify-content: space-between;
     align-items: center; }
@@ -214,8 +211,8 @@ a.wh,
 
 .menubox {
   margin: 0;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   display: inline-block;
   position: relative;
   z-index: 999;
@@ -250,7 +247,7 @@ a.wh,
 nav#g-nav {
   width: 100%;
   display: block;
-  top: 80px;
+  top: 70px;
   z-index: 9;
   transition: 0.8s;
   transform: translate(100%, 0); }
@@ -351,6 +348,8 @@ nav#g-nav {
 -----------------------------------*/
 #voice {
   margin: 0 auto; }
+  #voice .inner {
+    max-width: 1500px; }
   #voice .swiper-voice-container {
     width: 333px;
     margin: 0 auto;
@@ -371,6 +370,7 @@ nav#g-nav {
     background-color: #f5f5f5; }
     @media screen and (min-width: 768px) {
       #voice .wrap {
+        padding: 60px;
         justify-content: space-between;
         align-items: center; } }
   #voice .right {
@@ -405,7 +405,7 @@ nav#g-nav {
   @media screen and (min-width: 768px) {
     #attention .inner {
       width: 60%; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     #attention .inner {
       width: 80%; } }
 @media screen and (min-width: 960px) {
