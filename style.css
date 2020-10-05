@@ -105,7 +105,7 @@ a.wh,
 .wh > li > a {
   color: #fff; }
 
-/* js */
+/* animation */
 .js-anime {
   opacity: 0;
   visibility: hidden;
@@ -115,6 +115,9 @@ a.wh,
     opacity: 1;
     visibility: visible;
     transform: translateY(0px); }
+
+#g-nav > ul > .current > a {
+  color: blue; }
 
 /*btn*/
 .btn a {

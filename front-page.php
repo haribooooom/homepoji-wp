@@ -36,7 +36,7 @@
 <div id="voice">
   <div class="inner">
 
-    <h2>参加した人の声</h2>
+    <h2>参加者の声</h2>
     <div class="pc-flex">
 
       <div class="swiper-voice-container mb20">
@@ -107,7 +107,7 @@
 </div>
 <div id="attention">
   <div class="inner">
-    <h2>参加上の注意事項</h2>
+    <h2>注意事項</h2>
     <div class="bg-img bg">
       <ul class="mb40">
         <li class="js-anime">相手をけなしたりバカにすること</li>
