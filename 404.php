@@ -8,7 +8,8 @@
 get_header(); ?>
 
 <main class="p404">
-    <img src="<?php echo get_template_directory_uri(); ?>./assets/img/404.png" width="100%" alt="">
+   <div class="wrapper">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/404.png" width="100%" alt="">
   <div class="inner">
     <div class="container">
         <div class="error-messages tcenter mb30">
@@ -25,7 +26,7 @@ get_header(); ?>
     </div>
   </div>
   <!--__inner-->
-
+</div>
 </main>
 
 <?php get_footer(); ?>
