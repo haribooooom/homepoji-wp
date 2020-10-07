@@ -57,7 +57,7 @@ Template Name:contact
       <fieldset>
         <legend>7.キャンセルは2日前までに言ってください！<span class="required"></span></legend>
         <div class="flex">
-          <input type="radio" name="entry.275532908" value="ok" id="ok" required><label for="ok">OK！</label>
+          <input type="radio" name="entry.275532908" value="ok" id="ok"><label for="ok">OK！</label>
         </div>
       </fieldset>
        <fieldset>
@@ -77,20 +77,22 @@ Template Name:contact
     </iframe>
     <div class="thxMessage">
       <p>ご応募いただきありがとうございます！</p>
-      <p>後日担当のものより、<br>改めて確認の連絡を任意の連絡先からさせていただきます。<br>しばらくお待ちください！</p>
+      <p>後日担当のものより、<br>改めて確認の連絡を任意の連絡先からさせていただきます。<br>しばらくお待ちください。</p>
+
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/il_thank_smile.png" alt="">
-      <div class="flex">
-      <p><input type="button" value="前のページへ戻る" onclick="history.back()"></p>
-        <p class=""><a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>"></p>
-      </div>
-      <div class="tw-follow"><a href="https://twitter.com/intent/follow?screen_name=home_positive">Twitterをフォローする</a></div>
+
+             <p class="tcenter mb20">入力をやり直す、変更があった場合はお手数ですが、以下のボタンをクリックしてもう一度お送りください。</p>
+      <input type="button" class="reload mb30" value="このページを再読込する" onclick="window.location.reload();" />
+              <div class="back">
+          <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">ホームに戻る
+          </a>
+        </div>
     </div>
     <!--thxMessage-->
   </div>
   <!--wrapper-->
   </main>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script>
     $(function() {
       $('#btn').on('click', function() {
@@ -113,6 +115,8 @@ Template Name:contact
         $('#form').addClass('myform');
         // メッセージを表示する
         $('.thxMessage').show();
+        $('.twshare').show();
+        $('.wrapper').css('padding-bottom',0);
         });
         //inputタグにフォーカスを当てる
         $('input').on('focus', function() {

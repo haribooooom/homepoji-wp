@@ -211,7 +211,6 @@ a.wh,
   height: 60px;
   margin-left: 20px;
   background-size: contain;
-  background-image: url(./assets/img/logo.png);
   z-index: 9999; }
   .logo a:hover {
     cursor: pointer; }
@@ -281,7 +280,7 @@ nav#g-nav {
       display: block;
       padding: 20px;
       font-weight: 600;
-      background-color: rgba(0, 0, 0, 0.6); }
+      background-color: rgba(50, 50, 50, 0.95); }
       @media screen and (min-width: 768px) {
         nav#g-nav ul li a {
           color: #323232;
@@ -554,10 +553,11 @@ small {
 
 .wrapper {
   margin: 0 auto;
-  padding: 100px 20px; }
+  padding: 100px 20px;
+  background-color: #fff; }
   @media screen and (min-width: 768px) {
     .wrapper {
-      width: 80%; } }
+      max-width: 660px; } }
 
 h1 {
   font-size: 3rem;
@@ -641,25 +641,24 @@ textarea {
   display: none; }
 
 .thxMessage {
-  display: none; }
+  display: none;
+  height: 90vh; }
+  @media screen and (min-width: 768px) {
+    .thxMessage {
+      height: 100vh; } }
 
 .myform {
   display: none; }
 
 .errorText {
   color: red;
-  font-weight: 900; }
+  font-weight: 600; }
 
 /*    thxMessage*/
 .thxMessage {
   margin: 0 auto;
   text-align: center;
-  font-size: 1.6rem;
   position: relative; }
-  @media screen and (min-width: 768px) {
-    .thxMessage {
-      height: 100vh;
-      width: 80%; } }
   .thxMessage p {
     line-height: 2;
     margin-bottom: 20px; }
@@ -668,36 +667,29 @@ textarea {
     margin-bottom: 30px; }
     @media screen and (min-width: 768px) {
       .thxMessage img {
-        width: 50%; } }
-  .thxMessage .flex a {
-    margin: 0 auto;
-    width: 100%;
-    margin-bottom: 40px;
-    justify-content: space-between; }
-    @media screen and (min-width: 768px) {
-      .thxMessage .flex a {
-        width: 50%; } }
-    .thxMessage .flex a:first-of-type::before {
-      content: "<"; }
-    .thxMessage .flex a::last-of-type::after {
-      content: ">"; }
+        width: 80%; } }
+  .thxMessage .flex {
+    justify-content: space-around;
+    margin: 0 auto; }
 
 /*btn*/
-.tw-follow a {
-  display: inline-block;
+.reload {
+  display: block;
   margin: 0 auto;
+  margin-bottom: 20px;
   padding: 10px;
   text-align: center;
   font-size: 1.6rem;
   color: #fff;
-  background-color: #58D1FD;
+  border: none;
+  background-color: #1A242B;
   transition: 1s;
   z-index: 99; }
   @media screen and (min-width: 768px) {
-    .tw-follow a {
+    .reload {
       width: 50%; } }
-  .tw-follow a:hover {
+  .reload:hover {
     cursor: pointer;
     color: #fff;
     transition: 1s;
-    background-color: #1A242B; }
+    background-color: #aaa; }

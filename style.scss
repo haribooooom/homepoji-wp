@@ -377,7 +377,7 @@ nav#g-nav {
       display: block;
       padding: 20px;
       font-weight: 600;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(50, 50, 50, 0.95);
 
       @include mq-tablet {
         color: $bl;
@@ -786,8 +786,9 @@ small {
 .wrapper {
         margin: 0 auto;
       padding: 100px 20px;
+  background-color:$wh;
     @include mq-tablet {
-      width: 80%;
+      max-width: 660px;
   }
     }
 
@@ -904,6 +905,10 @@ textarea {
 
     .thxMessage {
       display: none;
+      height: 90vh;
+        @include mq-tablet {
+      height: 100vh;
+      }
     }
 
     .myform {
@@ -912,7 +917,7 @@ textarea {
 
     .errorText {
       color: red;
-      font-weight: 900;
+      font-weight: 600;
     }
 
 
@@ -920,50 +925,40 @@ textarea {
     .thxMessage {
       margin: 0 auto;
       text-align: center;
-      font-size: 1.6rem;
       position: relative;
-      @include mq-tablet {
-                height: 100vh;
+
+
+      p {
+        line-height: 2;
+        margin-bottom: 20px;
+      }
+
+      img {
         width: 80%;
-      }
-      p{
-      line-height: 2;
-      margin-bottom: 20px;
-      }
-      img{
-      width: 80%;
-      margin-bottom: 30px;
-  @include mq-tablet {
-         width: 50%;
-}
-      }
-      .flex a{
-      margin: 0 auto;
-      width: 100%;
-      margin-bottom: 40px;
-      justify-content: space-between;
-          @include mq-tablet {
-             width: 50%;
+        margin-bottom: 30px;
+
+        @include mq-tablet {
+          width: 80%;
         }
-        &:first-of-type::before {
-      content: "<";
-    }
-        &::last-of-type::after {
-      content: ">";
-    }
+      }
+      .flex{
+        justify-content: space-around;
+        margin: 0 auto;
       }
     }
 
     /*btn*/
 
-    .tw-follow a {
-      display: inline-block;
+    .reload{
+      display: block;
       margin: 0 auto;
+      margin-bottom: 20px;
       padding: 10px;
       text-align: center;
       font-size: 1.6rem;
       color: #fff;
-      background-color: #58D1FD;
+      border: none;
+      background-color: $sub;
       transition: 1s;
       z-index: 99;
         @include mq-tablet {
@@ -973,6 +968,6 @@ textarea {
       cursor: pointer;
       color: #fff;
       transition: 1s;
-      background-color:  #1A242B;
+      background-color:  #aaa;
       }
     }
