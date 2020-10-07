@@ -41,6 +41,9 @@ $img:"./assets/img";
 @mixin shadow($color:$c66) {
   box-shadow: 0 0 3px $color;
 }
+@mixin border($color:$bl) {
+  border: 1px solid $color;
+}
 
 //レイアウト
 /* トップページのメニュー */
@@ -123,10 +126,11 @@ h2 {
 p,
 a,
 li,
-li a {
+li a,legend {
   font-size: 1.6rem;
   line-height: 2;
 }
+
 
 a.bl,
 .bl > li > a {
@@ -233,7 +237,7 @@ a.wh,
     }
   }
 
-  .recrut {
+  .entry {
     background-color: #fd5858;
 
     span::after {
@@ -769,33 +773,41 @@ small {
   width: 100%;
 }
 
-/* お問い合わせフォーム */
-.wpcf7 {
-  padding: 0 20px;
+//.homeform{
 
-  @include mq-tablet {
-    padding: 0 15%;
-  }
+.wrapper {
+        margin: 0 auto;
+      padding: 100px 20px;
+    }
 
-  p {
-    margin-bottom: 16px;
-  }
+h1 {
+      font-size: 3rem;
+      text-align: center;
+}
 
-  label {
-    display: block;
-    font-size: 1.6rem;
-    line-height: 2;
-  }
+    fieldset {
+      margin-bottom: 25px;
+      display: block;
+      font-size: 1.4rem;
+    }
+
+    legend {
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    span {
+      color: red;
+    }
 
   input {
     &[type="radio"] {
       -webkit-transform: scale(1.5);
       transform: scale(1.5);
       margin-right: 15px;
-      width: 10px;
-
-      &:after {
-        background-color: #efefef;
+      margin-left: 30px;
+      &:nth-child(1){
+        margin-left: 0;
       }
 
       &:after,
@@ -809,7 +821,11 @@ small {
         content: '';
         display: inline-block;
         visibility: visible;
-        border: 2px solid white;
+      @include border($pwh) {}
+      }
+
+      &:after {
+        background-color: #fdfdfd;
       }
 
       &:checked:after {
@@ -820,36 +836,45 @@ small {
     &[type="text"],
     &[type="email"] {
       display: block;
-      margin-top: 5px;
-      padding: 1.5%;
+      padding: 8px;
       width: 100%;
       box-sizing: border-box;
-      border: 1px solid #f3f3f3;
+      @include border() {}
       resize: none;
-
-      @include shadow(#e7e7e7) {}
     }
 
-    &[type="submit"] {
-      width: 200px;
-      padding: 10px;
-      margin-top: 30px;
-      border: none;
-      background-color: $main;
-      -webkit-appearance: none;
-      cursor: pointer;
-
-      &:hover {
-        background-color: $gr;
-      }
+    &[type="text"]{
+            display: block;
+      width: 100%;
+      padding: 2%;
+      box-sizing: border-box;
+      resize: none;
     }
 
   }
+
+    button[type="submit"] {
+      width: 50%;
+      padding: 10px;
+      margin: 0 auto;
+      font-size: 2rem;
+      font-weight: 600;
+      border: none;
+      color: #fff;
+      border: none;
+      -webkit-appearance: none;
+      display: block;
+      background-color: rgb(102, 194, 97);
+
+      &:hover {
+      cursor: pointer;
+        background-color: #aaa;
+      }
+    }
 
   span.wpcf7-list-item {
     margin: 0 2.5em 0 0;
   }
-}
 
 textarea {
   display: block;
@@ -857,8 +882,104 @@ textarea {
   padding: 1%;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #f3f3f3;
+  @include border() {}
   resize: none;
 
-  @include shadow(#e7e7e7) {}
 }
+
+    /*    thxMessage*/
+    .thxMessage {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.6rem;
+      position: relative;
+    }
+
+    .thxMessage p {
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+
+    .thxMessage img {
+      width: 80%;
+      margin-bottom: 30px;
+    }
+
+    .thxMessage .flex a {
+      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 40px;
+      justify-content: space-between;
+    }
+
+    .thxMessage .flex a:first-of-type::before {
+      content: "<";
+    }
+
+    .thxMessage .flex a:last-of-type::after {
+      content: ">";
+    }
+
+
+    @media screen and (min-width: 768px) {
+      .thxMessage {
+        height: 100vh;
+        width: 80%;
+      }
+
+      .thxMessage img {
+        width: 50%;
+      }
+
+      .thxMessage .flex a {
+        width: 50%;
+      }
+
+      .tw-follow a {
+        width: 50%;
+      }
+
+    }
+
+    /*btn*/
+
+a {
+    }
+
+    .tw-follow a {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 4%;
+      text-align: center;
+      border-radius: 100px;
+      font-size: 1.6rem;
+      color: #fff;
+      background-color: #58D1FD;
+      box-shadow: 0 0 3px #aaa;
+      transition: 1s;
+      z-index: 99;
+    }
+
+    .tw-follow a:hover {
+      cursor: pointer;
+      color: #fff;
+      transition: 1s;
+      background-color:  #1A242B;
+    }
+
+    .dummy {
+      display: none;
+    }
+
+    .thxMessage {
+      display: none;
+    }
+
+    .myform {
+      display: none;
+    }
+
+    .errorText {
+      color: red;
+      font-weight: 900;
+    }

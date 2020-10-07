@@ -56,7 +56,7 @@
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <!--share-->
-      <div class="recrut">
+      <div class="entry">
         <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>" class="wh">
           <i class="fa fa-envelope"></i><span></span></a>
       </div>

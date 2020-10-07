@@ -23,7 +23,6 @@
           <li class="js-anime">人見知りを克服したい</li>
         </ul>
         <p>そのようなあなたに来て欲しいと思っています。</p>
-        <div class="btn"><a href="./hoge.html">開催者の想い</a></div>
       </div>
       <!--box-->
     </div>
@@ -138,7 +137,7 @@
           <label for="qa_1">Q1.ホメポジはいつ開催されますか？</label>
           <div class="cp_actab-content">
             <p>A１.月一で不定期で運営の揃う土日の夜に開催されます。
-              次回の開催についてはホメポジ公式アカウントか、運営のツイートを随時ご確認ください。<a href="#">→ホメポジ公式</a></p>
+              次回の開催についてはホメポジ公式アカウントか、運営のツイートを随時ご確認ください。<a href="https://twitter.com/home_positive">→ホメポジ公式</a></p>
           </div>
         </div>
 
@@ -168,7 +167,7 @@
 
     <div class="btn__items tcenter">
       <p>その他ご質問等ございましたら、<br>
-        <a href="#">ホメポジ公式アカウント</a>までご連絡ください。
+        <a href="https://twitter.com/home_positive">ホメポジ公式アカウント</a>までご連絡ください。
       </p>
 
       <!--watch__btn-->

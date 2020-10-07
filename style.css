@@ -93,7 +93,7 @@ h2 {
 p,
 a,
 li,
-li a {
+li a, legend {
   font-size: 1.6rem;
   line-height: 2; }
 
@@ -175,12 +175,12 @@ a.wh,
       @media screen and (min-width: 768px) {
         .float .tw-share span::after {
           content: "シェア"; } }
-  .float .recrut {
+  .float .entry {
     background-color: #fd5858; }
-    .float .recrut span::after {
+    .float .entry span::after {
       content: "応募する"; }
       @media screen and (min-width: 768px) {
-        .float .recrut span::after {
+        .float .entry span::after {
           content: "応募"; } }
   .float .fa {
     margin-right: 1rem; }
@@ -545,59 +545,80 @@ footer {
 small {
   width: 100%; }
 
-/* お問い合わせフォーム */
-.wpcf7 {
-  padding: 0 20px; }
-  @media screen and (min-width: 768px) {
-    .wpcf7 {
-      padding: 0 15%; } }
-  .wpcf7 p {
-    margin-bottom: 16px; }
-  .wpcf7 label {
-    display: block;
-    font-size: 1.6rem;
-    line-height: 2; }
-  .wpcf7 input[type="radio"] {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-    margin-right: 15px;
-    width: 10px; }
-    .wpcf7 input[type="radio"]:after {
-      background-color: #efefef; }
-    .wpcf7 input[type="radio"]:after, .wpcf7 input[type="radio"]:checked:after {
-      width: 15px;
-      height: 15px;
-      border-radius: 15px;
-      top: -2px;
-      left: -1px;
-      position: relative;
-      content: '';
-      display: inline-block;
-      visibility: visible;
-      border: 2px solid white; }
-    .wpcf7 input[type="radio"]:checked:after {
-      background-color: #FDE458; }
-  .wpcf7 input[type="text"], .wpcf7 input[type="email"] {
-    display: block;
-    margin-top: 5px;
-    padding: 1.5%;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #f3f3f3;
-    resize: none;
-    box-shadow: 0 0 3px #e7e7e7; }
-  .wpcf7 input[type="submit"] {
-    width: 200px;
-    padding: 10px;
-    margin-top: 30px;
-    border: none;
-    background-color: #FDE458;
-    -webkit-appearance: none;
-    cursor: pointer; }
-    .wpcf7 input[type="submit"]:hover {
-      background-color: #888; }
-  .wpcf7 span.wpcf7-list-item {
-    margin: 0 2.5em 0 0; }
+.wrapper {
+  margin: 0 auto;
+  padding: 100px 20px; }
+
+h1 {
+  font-size: 3rem;
+  text-align: center; }
+
+fieldset {
+  margin-bottom: 25px;
+  display: block;
+  font-size: 1.4rem; }
+
+legend {
+  margin-bottom: 8px;
+  line-height: 1; }
+
+span {
+  color: red; }
+
+input[type="radio"] {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  margin-right: 15px;
+  margin-left: 30px; }
+  input[type="radio"]:nth-child(1) {
+    margin-left: 0; }
+  input[type="radio"]:after, input[type="radio"]:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #e8e8e8; }
+  input[type="radio"]:after {
+    background-color: #fdfdfd; }
+  input[type="radio"]:checked:after {
+    background-color: #FDE458; }
+input[type="text"], input[type="email"] {
+  display: block;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #323232;
+  resize: none; }
+input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 2%;
+  box-sizing: border-box;
+  resize: none; }
+
+button[type="submit"] {
+  width: 50%;
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  border: none;
+  -webkit-appearance: none;
+  display: block;
+  background-color: #66c261; }
+  button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #aaa; }
+
+span.wpcf7-list-item {
+  margin: 0 2.5em 0 0; }
 
 textarea {
   display: block;
@@ -605,6 +626,78 @@ textarea {
   padding: 1%;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #f3f3f3;
-  resize: none;
-  box-shadow: 0 0 3px #e7e7e7; }
+  border: 1px solid #323232;
+  resize: none; }
+
+/*    thxMessage*/
+.thxMessage {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.6rem;
+  position: relative; }
+
+.thxMessage p {
+  line-height: 2;
+  margin-bottom: 20px; }
+
+.thxMessage img {
+  width: 80%;
+  margin-bottom: 30px; }
+
+.thxMessage .flex a {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 40px;
+  justify-content: space-between; }
+
+.thxMessage .flex a:first-of-type::before {
+  content: "<"; }
+
+.thxMessage .flex a:last-of-type::after {
+  content: ">"; }
+
+@media screen and (min-width: 768px) {
+  .thxMessage {
+    height: 100vh;
+    width: 80%; }
+
+  .thxMessage img {
+    width: 50%; }
+
+  .thxMessage .flex a {
+    width: 50%; }
+
+  .tw-follow a {
+    width: 50%; } }
+/*btn*/
+.tw-follow a {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 4%;
+  text-align: center;
+  border-radius: 100px;
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #58D1FD;
+  box-shadow: 0 0 3px #aaa;
+  transition: 1s;
+  z-index: 99; }
+
+.tw-follow a:hover {
+  cursor: pointer;
+  color: #fff;
+  transition: 1s;
+  background-color: #1A242B; }
+
+.dummy {
+  display: none; }
+
+.thxMessage {
+  display: none; }
+
+.myform {
+  display: none; }
+
+.errorText {
+  color: red;
+  font-weight: 900; }
