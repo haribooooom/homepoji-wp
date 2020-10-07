@@ -11,12 +11,12 @@ Template Name:contact
     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeKMu5MGYxKLOE1N6yrtJcw3f9k4HU8HnTcTp884zFiKpg4pw/formResponse" id="form" method="post" target="dummyIframe">
 
       <fieldset>
-        <legend>1.お名前（呼ばれたい名前）を教えてください<span>*</span></legend>
+        <legend>1.お名前（呼ばれたい名前）を教えてください<span class="required"></span></legend>
         <input id="namae" type="text" placeholder="名前を記入してください" required name="entry.116488346" required>
       </fieldset>
       <!--name-->
       <fieldset>
-        <legend>2.TwitterIDを@から教えてください</legend>
+        <legend>2.TwitterIDを@から教えてください<span class="required"></span></legend>
         <input id="tw-id" type="text" placeholder="TwitterIDを@から記入してください" required name="entry.173918627">
       </fieldset>
       <!--tw-id-->
@@ -46,7 +46,7 @@ Template Name:contact
 
 
       <fieldset>
-        <legend>6.20歳以上ですか？<small>(開催場所の検討のための確認)</small></legend>
+        <legend>6.20歳以上ですか？<small>(開催場所の検討のための確認)</small><span class="required"></span></legend>
         <div class="flex">
           <input type="radio" name="entry.1477809744" value="yes" id="yes"><label for="yes">はい</label>
           <input type="radio" name="entry.1477809744" value="no" id="no"><label for="no">いいえ</label>
@@ -55,7 +55,7 @@ Template Name:contact
       <!--job-->
 
       <fieldset>
-        <legend>7.キャンセルは2日前までに言ってください！</legend>
+        <legend>7.キャンセルは2日前までに言ってください！<span class="required"></span></legend>
         <div class="flex">
           <input type="radio" name="entry.275532908" value="ok" id="ok" required><label for="ok">OK！</label>
         </div>
@@ -78,7 +78,7 @@ Template Name:contact
     <div class="thxMessage">
       <p>ご応募いただきありがとうございます！</p>
       <p>後日担当のものより、<br>改めて確認の連絡を任意の連絡先からさせていただきます。<br>しばらくお待ちください！</p>
-      <img src="<?php echo get_template_directory_uri(); ?>assets/img/il_thank_smile.png" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/il_thank_smile.png" alt="">
       <div class="flex">
       <p><input type="button" value="前のページへ戻る" onclick="history.back()"></p>
         <p class=""><a href="./index.html">ホメポジホーム<span></span></a></p>
