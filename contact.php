@@ -81,7 +81,7 @@ Template Name:contact
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/il_thank_smile.png" alt="">
       <div class="flex">
       <p><input type="button" value="前のページへ戻る" onclick="history.back()"></p>
-        <p class=""><a href="./index.html">ホメポジホーム<span></span></a></p>
+        <p class=""><a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>"></p>
       </div>
       <div class="tw-follow"><a href="https://twitter.com/intent/follow?screen_name=home_positive">Twitterをフォローする</a></div>
     </div>
