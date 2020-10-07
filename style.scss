@@ -887,85 +887,6 @@ textarea {
 
 }
 
-    /*    thxMessage*/
-    .thxMessage {
-      margin: 0 auto;
-      text-align: center;
-      font-size: 1.6rem;
-      position: relative;
-    }
-
-    .thxMessage p {
-      line-height: 2;
-      margin-bottom: 20px;
-    }
-
-    .thxMessage img {
-      width: 80%;
-      margin-bottom: 30px;
-    }
-
-    .thxMessage .flex a {
-      margin: 0 auto;
-      width: 100%;
-      margin-bottom: 40px;
-      justify-content: space-between;
-    }
-
-    .thxMessage .flex a:first-of-type::before {
-      content: "<";
-    }
-
-    .thxMessage .flex a:last-of-type::after {
-      content: ">";
-    }
-
-
-    @media screen and (min-width: 768px) {
-      .thxMessage {
-        height: 100vh;
-        width: 80%;
-      }
-
-      .thxMessage img {
-        width: 50%;
-      }
-
-      .thxMessage .flex a {
-        width: 50%;
-      }
-
-      .tw-follow a {
-        width: 50%;
-      }
-
-    }
-
-    /*btn*/
-
-a {
-    }
-
-    .tw-follow a {
-      display: inline-block;
-      margin: 0 auto;
-      padding: 4%;
-      text-align: center;
-      border-radius: 100px;
-      font-size: 1.6rem;
-      color: #fff;
-      background-color: #58D1FD;
-      box-shadow: 0 0 3px #aaa;
-      transition: 1s;
-      z-index: 99;
-    }
-
-    .tw-follow a:hover {
-      cursor: pointer;
-      color: #fff;
-      transition: 1s;
-      background-color:  #1A242B;
-    }
 
     .dummy {
       display: none;
@@ -982,4 +903,66 @@ a {
     .errorText {
       color: red;
       font-weight: 900;
+    }
+
+
+    /*    thxMessage*/
+    .thxMessage {
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.6rem;
+      position: relative;
+      @include mq-tablet {
+                height: 100vh;
+        width: 80%;
+      }
+      p{
+      line-height: 2;
+      margin-bottom: 20px;
+      }
+      img{
+      width: 80%;
+      margin-bottom: 30px;
+  @include mq-tablet {
+         width: 50%;
+}
+      }
+      .flex a{
+      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 40px;
+      justify-content: space-between;
+          @include mq-tablet {
+             width: 50%;
+        }
+        &:first-of-type::before {
+      content: "<";
+    }
+        &::last-of-type::after {
+      content: ">";
+    }
+      }
+    }
+
+    /*btn*/
+
+    .tw-follow a {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 10px;
+      text-align: center;
+      font-size: 1.6rem;
+      color: #fff;
+      background-color: #58D1FD;
+      transition: 1s;
+      z-index: 99;
+        @include mq-tablet {
+            width: 50%;
+      }
+      &:hover{
+      cursor: pointer;
+      color: #fff;
+      transition: 1s;
+      background-color:  #1A242B;
+      }
     }

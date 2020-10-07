@@ -78,10 +78,10 @@ Template Name:contact
     <div class="thxMessage">
       <p>ご応募いただきありがとうございます！</p>
       <p>後日担当のものより、<br>改めて確認の連絡を任意の連絡先からさせていただきます。<br>しばらくお待ちください！</p>
-      <img src="img/il_thank_smile.png" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>assets/img/il_thank_smile.png" alt="">
       <div class="flex">
-        <a href="./index.html"><span></span>フォームに戻る</a>
-        <a href="./index.html">ホメポジホーム<span></span></a>
+      <p><input type="button" value="前のページへ戻る" onclick="history.back()"></p>
+        <p class=""><a href="./index.html">ホメポジホーム<span></span></a></p>
       </div>
       <div class="tw-follow"><a href="https://twitter.com/intent/follow?screen_name=home_positive">Twitterをフォローする</a></div>
     </div>
@@ -96,35 +96,29 @@ Template Name:contact
       $('#btn').on('click', function() {
 
         //        名前とメールは必須
-        var name = $('#name').val();
-        var mail = $('#mail').val();
-        var ok = $('#ok').val();
+        var name = $('#namae').val();
+        var tw = $('#tw-id').val();
 
-        if (name === "" || mail === "" || textArea === "") {
+        if (name === "" || tw === "") {
           if (name === "") {
-            $('#name').val('名前入力は必須です').addClass('errorText');
+            $('#namae').val('名前入力は必須です').addClass('errorText');
           }
-
-          if (mail === "") {
+          if (tw === "") {
             $('#tw-id').val('TwitterIDは必須です').addClass('errorText');
-          }
-           if ( ok === "") {
-            $('#textArea').val('チェックは必須です').addClass('errorText');
           }
           return false;
         }
 
-        //        フォームを消す
-                $('#form').addClass('myform');
-        //        メッセージを表示する
-                $('.thxMessage').show();
-      });
-      //inputタグにフォーカスを当てる
-      $('input').on('focus', function() {
-        //        文字を通常色に戻す
+        // フォームを消す
+        $('#form').addClass('myform');
+        // メッセージを表示する
+        $('.thxMessage').show();
+        });
+        //inputタグにフォーカスを当てる
+        $('input').on('focus', function() {
+        // 文字を通常色に戻す
         $(this).removeClass('errorText').val('');
-      });
-
+        });
 
 
     });
