@@ -26,9 +26,9 @@
   window.addEventListener('scroll', showElementAnimation);
 
 // スムーススクロール
-  (function () {
+  $(function () {
     // #で始まるアンカーをクリックした場合に処理
-//    $('a[href^="#"]').not('#tab>li>a').on('click', function () {
+    $('a[href^="#"]').on('click', function () {
 
       // 移動先を取得
       var href = $(this).attr("href");
@@ -40,7 +40,6 @@
         scrollTop: position
       }, 300, 'swing');
       return false;
-//    });
+    });
 
   });
-

@@ -27,7 +27,8 @@
      <div class="h-wrap">
       <div class="flex">
         <div class="logo">
-          <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="">
+          <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
+<!--          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="">-->
           </a>
         </div>
         <div class="menubox">
@@ -51,12 +52,12 @@
 
     <div class="float flex fix bold tcenter">
       <div class="tw-share">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false" class="wh"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false" class="wh"><i class="fa fa-twitter" aria-hidden="true" target="_blank"></i><span></span></a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <!--share-->
       <div class="entry">
-        <a href="<?php echo get_permalink( get_page_by_title( 'Contact' )->ID ); ?>" class="wh">
+        <a href="https://forms.gle/AjiCE7jkt5GCjUDg6" class="wh" target="_blank">
           <i class="fa fa-envelope"></i><span></span></a>
       </div>
     </div>

@@ -103,10 +103,10 @@ Template Name:contact
 
         if (name === "" || tw === "") {
           if (name === "") {
-            $('#namae').val('名前入力は必須です').addClass('errorText');
+//            $('#namae').val('名前入力は必須です').addClass('errorText');
           }
           if (tw === "") {
-            $('#tw-id').val('TwitterIDは必須です').addClass('errorText');
+//            $('#tw-id').val('TwitterIDは必須です').addClass('errorText');
           }
           return false;
         }
