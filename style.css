@@ -430,6 +430,10 @@ nav#g-nav.click {
 #about {
   padding: 30px 20px;
 }
+#about .box {
+  position: relative;
+  z-index: 99;
+}
 #about .inner {
   background-color: #fff;
 }
@@ -445,6 +449,20 @@ nav#g-nav.click {
 @media screen and (min-width: 768px) {
   #about .bg-img {
     background-position: right;
+  }
+}
+#about .bg-img:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (min-width: 768px) {
+  #about .bg-img:before {
+    display: none;
   }
 }
 
