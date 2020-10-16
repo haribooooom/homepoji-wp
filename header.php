@@ -26,8 +26,8 @@
     <div class="header fix">
      <div class="h-wrap">
       <div class="flex">
-        <div class="logo">
-          <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>">
+        <div class="logoimg">
+          <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
           </a>
         </div>
         <div class="menubox">
