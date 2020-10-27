@@ -73,7 +73,7 @@ body > div:nth-of-type(2n) {
 
 .center, .bar,
 .bar::before,
-.bar::after, #fv img {
+.bar::after, #fv img.fv-jump, #fv img.fv-text {
   left: 0px;
   right: 0px;
   margin: 0 auto;
@@ -194,6 +194,10 @@ a.wh,
 .float div {
   width: 50vw;
 }
+.float div:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 @media screen and (min-width: 768px) {
   .float div {
     width: 100px;
@@ -264,15 +268,14 @@ a.wh,
 
 .logo {
   position: relative;
-  width: 60px;
-  height: 60px;
-  margin-left: 20px;
-  background-size: contain;
-  background-image: url(assets/img/logo.png);
+  margin-left: 40px;
   z-index: 9999;
 }
 .logo:hover {
   cursor: pointer;
+}
+.logo img {
+  height: 60px;
 }
 
 .menubox {
@@ -328,7 +331,7 @@ nav#g-nav {
 @media screen and (min-width: 768px) {
   nav#g-nav {
     position: relative;
-    width: 90%;
+    width: 75%;
     height: auto;
     top: 0;
     transform: translate(0, 0);
@@ -340,7 +343,6 @@ nav#g-nav .flex {
 @media screen and (min-width: 768px) {
   nav#g-nav .flex {
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 nav#g-nav ul li {
@@ -350,6 +352,7 @@ nav#g-nav ul li {
 @media screen and (min-width: 768px) {
   nav#g-nav ul li {
     border: none;
+    width: calc((100%/6) - 20px);
   }
 }
 nav#g-nav ul li a {
@@ -384,22 +387,37 @@ nav#g-nav.click {
 }
 #fv.bg-img {
   position: relative;
-  background-image: url(./assets/img/fv.png);
+  background-image: url(./assets/img/fv.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
 #fv img {
   position: absolute;
   z-index: 9;
-  bottom: -250px;
-  bottom: -50px;
+}
+#fv img.fv-jump {
+  top: 40%;
+}
+@media screen and (min-width: 768px) {
+  #fv img.fv-jump {
+    top: 35%;
+  }
+}
+#fv img.fv-text {
+  top: 25%;
+  transform: rotate(-10deg);
+}
+@media screen and (min-width: 768px) {
+  #fv img.fv-text {
+    top: 20%;
+  }
 }
 #fv .box {
   font-size: 3rem;
   width: 85%;
   padding: 20px;
   position: absolute;
-  top: 40%;
+  bottom: 20px;
   left: 0px;
   right: 0px;
   margin: 0 auto;
@@ -409,8 +427,7 @@ nav#g-nav.click {
 }
 @media screen and (min-width: 768px) {
   #fv .box {
-    width: 50%;
-    top: 50%;
+    width: 30%;
   }
 }
 #fv .box strong {

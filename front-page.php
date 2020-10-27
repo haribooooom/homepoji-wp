@@ -6,7 +6,8 @@
     <strong class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</strong><strong>ようこそ、<span>ホメポジ</span>へ！</strong>
   </div>
   <!--box-->
-  <img class="js-anime" src="<?php echo get_template_directory_uri(); ?>/assets/img/il_fv_having_fun.png">
+  <img class="js-anime fv-text" src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png">
+  <img class="js-anime fv-jump" src="<?php echo get_template_directory_uri(); ?>/assets/img/il_fv_jump.png">
 
 </div>
 <div id="about">
@@ -53,10 +54,13 @@
           <!--.swiper-slide-->
           <div class="swiper-slide">
             <div class="wrap pc-flex">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/eririnn-san.jpg" alt="">
               <div class="txt">
-                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
-                <p class="right">（ルイさん）</p>
+                <p>普段会えない人たちとの出会いがすごく楽しかったです。
+それに、内容も基本的にポジティブなことを発言する場だったので、安心感を持って参加できました。
+初対面の方に褒めていただく経験もなかなかないですが、褒めてもらうと純粋にとても嬉しいし、自信が付きました！
+コンセプトに共感して集まっている方々での会だったので、とても居心地が良かったです。</p>
+                <p class="right">（えりりんさん）</p>
               </div>
             </div>
             <!--inner-->

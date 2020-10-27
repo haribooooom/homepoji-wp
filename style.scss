@@ -203,6 +203,11 @@ a.wh,
   div {
     width: 50vw;
 
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
     @include mq-tablet {
       width: 100px;
       height: 100px;
@@ -280,15 +285,15 @@ a.wh,
 
 .logo {
   position: relative;
-  width: 60px;
-  height: 60px;
-  margin-left: 20px;
-  background-size: contain;
-  background-image: url(assets/img/logo.png);
+  margin-left: 40px;
   z-index: 9999;
 
   &:hover {
     cursor: pointer;
+  }
+
+  img {
+    height: 60px;
   }
 }
 
@@ -345,7 +350,7 @@ nav#g-nav {
 
   @include mq-tablet {
     position: relative;
-    width: 90%;
+    width: 75%;
     height: auto;
     top: 0;
     transform: translate(0, 0);
@@ -356,7 +361,7 @@ nav#g-nav {
 
     @include mq-tablet {
       flex-direction: row;
-      justify-content: space-between;
+      //      justify-content: space-between;
     }
   }
 
@@ -366,6 +371,7 @@ nav#g-nav {
 
     @include mq-tablet {
       border: none;
+      width: calc((100%/6) - 20px);
     }
 
     a {
@@ -404,7 +410,7 @@ nav#g-nav {
 
   &.bg-img {
     position: relative;
-    background-image: url(#{$img}/fv.png);
+    background-image: url(#{$img}/fv.jpg);
     background-attachment: fixed;
     background-size: cover;
   }
@@ -413,9 +419,24 @@ nav#g-nav {
   img {
     position: absolute;
     z-index: 9;
-    bottom: -250px;
-    @extend .center;
-    bottom: -50px;
+
+    &.fv-jump {
+      top: 40%;
+      @extend .center;
+
+      @include mq-tablet {
+        top: 35%;
+      }
+    }
+    &.fv-text {
+      top: 25%;
+      transform: rotate(-10deg);
+      @extend .center;
+      @include mq-tablet {
+        top: 20%;
+      }
+    }
+
   }
 
   .box {
@@ -423,7 +444,7 @@ nav#g-nav {
     width: 85%;
     padding: 20px;
     position: absolute;
-    top: 40%;
+    bottom: 20px;
     left: 0px;
     right: 0px;
     margin: 0 auto;
@@ -433,8 +454,7 @@ nav#g-nav {
     box-shadow: 0 0 3px #eee;
 
     @include mq-tablet {
-      width: 50%;
-      top: 50%;
+      width: 30%;
     }
 
     strong {
@@ -457,10 +477,12 @@ nav#g-nav {
 /*#about-----------------------------------*/
 #about {
   padding: 30px 20px;
-  .box{
+
+  .box {
     position: relative;
     z-index: 99;
   }
+
   .inner {
     background-color: $wh;
 
@@ -477,6 +499,7 @@ nav#g-nav {
       background-position: right;
     }
   }
+
   .bg-img:before {
     content: '';
     position: absolute;
@@ -485,10 +508,11 @@ nav#g-nav {
     left: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.5);
-      @include mq-tablet {
-        display: none;
+
+    @include mq-tablet {
+      display: none;
     }
-}
+  }
 }
 
 /*voice

@@ -26,7 +26,7 @@
     <div class="header fix">
      <div class="h-wrap">
       <div class="flex">
-        <div class="logoimg">
+        <div class="logo">
           <a href="<?php echo get_permalink( get_page_by_title( '/' )->ID ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png">
           </a>
         </div>
@@ -42,7 +42,7 @@
             <li id="list03"><a href="#voice">参加者の声</a></li>
             <li id="list04"><a href="#entry">参加方法</a></li>
             <li id="list05"><a href="#attention">注意事項</a></li>
-            <li id="list06"><a href="#qa">ホメポジQ＆A</a></li>
+            <li id="list06"><a href="#qa">Q＆A</a></li>
           </ul>
         </nav>
       </div>
