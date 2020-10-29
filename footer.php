@@ -41,9 +41,9 @@
   });
 
   let slider1 = new Swiper('.swiper-voice-container', {
-    speed: 1000,
+    speed: 3000,
     autoplay: {
-      delay: 5000,
+      delay: 30000,
     },
     spaceBetween: 60,
       pagination: {
