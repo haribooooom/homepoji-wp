@@ -15,7 +15,9 @@
 
     <div class="bg-img bg">
       <div class="box"><strong>最近、<br>褒められていますか？</strong>
-        <p>ホメポジは<br><span class="bold">「参加前よりちょっと自分を<span class="red">スキ</span>になる」</span><br>を目的としてお互いに頑張ったことを認め合う会です。</p>
+        <p class="mb20">ホメポジは</p>
+        <p class="bold mb20">参加前より<br>ちょっと自分を<span class="red">スキ</span>になる</p>
+        <p class="mb30">を目的としてお互いに頑張ったことを認め合う会です。</p>
         <ul class="mb40">
           <li class="js-anime">頑張ってるのに報われない</li>
           <li class="js-anime">なんか毎日惰性で生きてる</li>
@@ -57,21 +59,10 @@
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/eririnn-san.jpg" alt="">
               <div class="txt">
                 <p>普段会えない人たちとの出会いがすごく楽しかったです。
-それに、内容も基本的にポジティブなことを発言する場だったので、安心感を持って参加できました。
-初対面の方に褒めていただく経験もなかなかないですが、褒めてもらうと純粋にとても嬉しいし、自信が付きました！
-コンセプトに共感して集まっている方々での会だったので、とても居心地が良かったです。</p>
+                  内容も基本的にポジティブなことを発言する場だったので、安心感を持って参加できました。
+                  初対面の方に褒めていただく経験もなかなかないですが、褒めてもらうと純粋にとても嬉しいし、自信が付きました！
+                  </p>
                 <p class="right">（えりりんさん）</p>
-              </div>
-            </div>
-            <!--inner-->
-          </div>
-          <!--.swiper-slide-->
-          <div class="swiper-slide">
-            <div class="wrap pc-flex">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
-              <div class="txt">
-                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
-                <p class="right">（ルイさん）</p>
               </div>
             </div>
             <!--inner-->
@@ -111,8 +102,8 @@
 <div id="attention">
   <div class="inner">
     <h2>注意事項</h2>
-    <div class="bg-img bg">
-      <ul class="mb40">
+    <div class="bg-img bg mb60">
+      <ul>
         <li class="js-anime">相手をけなしたりバカにすること</li>
         <li class="js-anime">宗教、ビジネスの勧誘</li>
         <li class="js-anime">店員さんや周囲のお客様への迷惑行為</li>
@@ -133,8 +124,8 @@
 
     <h2>ホメポジQ&amp;A</h2>
 
-    <div class="items">
-      <div class="cp_qa mb30">
+    <div class="items mb40">
+      <div class="cp_qa mb50">
 
         <div class="cp_actab ">
           <input id="qa_1" type="checkbox" name="tabs">

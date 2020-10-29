@@ -50,6 +50,7 @@ body > div:nth-of-type(2n) {
 }
 @media screen and (min-width: 960px) {
   .inner {
+    padding: 80px 20px;
     max-width: 960px;
   }
 }
@@ -388,8 +389,12 @@ nav#g-nav.click {
 #fv.bg-img {
   position: relative;
   background-image: url(./assets/img/fv.jpg);
-  background-attachment: fixed;
   background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  #fv.bg-img {
+    background-attachment: fixed;
+  }
 }
 #fv img {
   position: absolute;
@@ -446,6 +451,9 @@ nav#g-nav.click {
 /*#about-----------------------------------*/
 #about {
   padding: 30px 20px;
+}
+#about .bold {
+  font-size: 2rem;
 }
 #about .box {
   position: relative;
@@ -560,6 +568,8 @@ nav#g-nav.click {
 -----------------------------------*/
 #attention .inner {
   margin: 0 auto;
+  width: 80%;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   #attention .inner {
@@ -568,7 +578,7 @@ nav#g-nav.click {
 }
 @media screen and (min-width: 960px) {
   #attention .inner {
-    width: 80%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 960px) {
@@ -605,7 +615,7 @@ nav#g-nav.click {
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #1A242B;
   /* --質問の＋アイコン */
   /* 答え */
