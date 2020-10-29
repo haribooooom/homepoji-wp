@@ -3,7 +3,7 @@
 <div id="fv" class="bg-img bg">
 
   <div class="box tcenter js-anime">
-    <strong class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</strong><strong>ようこそ、<span>ホメポジ</span>へ！</strong>
+    <p class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</p><p>ようこそ、<span>ホメポジ</span>へ！</p>
   </div>
   <!--box-->
   <img class="js-anime fv-text" src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png">
@@ -56,7 +56,7 @@
           <!--.swiper-slide-->
           <div class="swiper-slide">
             <div class="wrap pc-flex">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/eririnn-san.jpg" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/eririnn-san.png" alt="">
               <div class="txt">
                 <p>普段会えない人たちとの出会いがすごく楽しかったです。
                   内容も基本的にポジティブなことを発言する場だったので、安心感を持って参加できました。
