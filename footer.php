@@ -11,7 +11,7 @@
     </ul>
     <!--f-nav-->
     <div class="sns mb20">
-      <div class="tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i>ホメポジTwitter</a></div>
+      <div class="tw"><a href="https://twitter.com/home_positive">ホメポジTwitter</a></div>
     </div>
 
     <small>Copyright &copy; <?php bloginfo( 'name' ); ?></small>

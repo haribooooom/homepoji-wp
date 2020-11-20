@@ -7,8 +7,8 @@
     <p>ようこそ、<span>ホメポジ</span>へ！</p>
   </div>
   <!--box-->
-  <img class="js-anime fv-text" src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png">
-  <img class="js-anime fv-jump" src="<?php echo get_template_directory_uri(); ?>/assets/img/il_fv_jump.png">
+<!--  <img class="js-anime fv-text" src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png">-->
+<!--  <img class="js-anime fv-jump" src="<?php echo get_template_directory_uri(); ?>/assets/img/il_fv_jump.png">-->
 
 </div>
 <div id="about">
