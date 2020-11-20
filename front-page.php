@@ -3,7 +3,8 @@
 <div id="fv" class="bg-img bg">
 
   <div class="box tcenter js-anime">
-    <p class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</p><p>ようこそ、<span>ホメポジ</span>へ！</p>
+    <p class="txt">ちょっと自分が<br><span class="red">スキ</span>になる！</p>
+    <p>ようこそ、<span>ホメポジ</span>へ！</p>
   </div>
   <!--box-->
   <img class="js-anime fv-text" src="<?php echo get_template_directory_uri(); ?>/assets/img/homepoji.png">
@@ -47,8 +48,10 @@
             <div class="wrap pc-flex">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
               <div class="txt">
-                <p>「人見知りを治したい」,「明るい人と会いたい」という人に本気でおすすめです。最高に素敵な会です。</p>
-                <p class="right">（ルイさん）</p>
+                <p>初めまして！まーもんです。<br>
+                  誰もがちょっと自分に自信がなくて、何かが変わるきっかけを探していると思います。新しい人と出会うことは怖いし、褒めることは恥ずかしい。でもそれが出来れば、確実に何かが変わるキッカケになると思います。
+                  素敵な仲間と一緒に、そんなあなたをお待ちしています！</p>
+                <p class="right">まーもん（主催者）</p>
               </div>
             </div>
             <!--inner-->
@@ -61,8 +64,8 @@
                 <p>普段会えない人たちとの出会いがすごく楽しかったです。
                   内容も基本的にポジティブなことを発言する場だったので、安心感を持って参加できました。
                   初対面の方に褒めていただく経験もなかなかないですが、褒めてもらうと純粋にとても嬉しいし、自信が付きました！
-                  </p>
-                <p class="right">（えりりんさん）</p>
+                </p>
+                <p class="right">えりりんさん（参加者）</p>
               </div>
             </div>
             <!--inner-->
@@ -131,30 +134,30 @@
           <input id="qa_1" type="checkbox" name="tabs">
           <label for="qa_1">Q1.ホメポジはいつ開催されますか？</label>
           <div class="cp_actab-content">
-            <p>A１.月一で不定期で運営の揃う土日の夜に開催されます。
+            <p>A1.月一で不定期で運営の揃う土日の夜に開催されます。
               次回の開催についてはホメポジ公式アカウントか、運営のツイートを随時ご確認ください。<a href="https://twitter.com/home_positive">→ホメポジ公式</a></p>
           </div>
+          <div class="box">▼</div>
         </div>
 
         <div class="cp_actab "><input id="qa_2" type="checkbox" name="tabs"><label for="qa_2">Q2.どこで開催されますか？</label>
           <div class="cp_actab-content">
-            <p>A2.東京都内の山手線沿線で開催されます。</p>
+            <p>A2.主に、皆が集まりやすい山手線沿線が多いです！
+              希望が多ければ別の場所でもで開催するかも？</p>
           </div>
+          <div class="box">▼</div>
         </div>
         <div class="cp_actab "><input id="qa_3" type="checkbox" name="tabs"><label for="qa_3">Q3.一人で参加することが不安です。。</label>
           <div class="cp_actab-content">
-            <p>A3.一人で参加される方がほとんどです！安心して参加してください。（下記の「参加者のあれこれ」というページから今までの参加者の方の傾向を紹介するページがあります。よろしければご覧ください！）</p>
+            <p>A3.一人で参加される方がほとんどです！安心して参加してください。</p>
           </div>
+          <div class="box">▼</div>
         </div>
-        <div class="cp_actab "><input id="qa_4" type="checkbox" name="tabs"><label for="qa_4">Q3.一人で参加することが不安です。。</label>
+        <div class="cp_actab "><input id="qa_4" type="checkbox" name="tabs"><label for="qa_4">Q4.ホメポジの再開はいつですか？</label>
           <div class="cp_actab-content">
-            <p>A3.一人で参加される方がほとんどです！安心して参加してください。（下記の「参加者のあれこれ」というページから今までの参加者の方の傾向を紹介するページがあります。よろしければご覧ください！）</p>
+            <p>A4.まだ決まっていません。みなさんに安心してご参加いただけるようになったら、また再開告知を行います！</p>
           </div>
-        </div>
-        <div class="cp_actab "><input id="qa_5" type="checkbox" name="tabs"><label for="qa_5">Q3.一人で参加することが不安です。。</label>
-          <div class="cp_actab-content">
-            <p>A3.一人で参加される方がほとんどです！安心して参加してください。（下記の「参加者のあれこれ」というページから今までの参加者の方の傾向を紹介するページがあります。よろしければご覧ください！）</p>
-          </div>
+          <div class="box">▼</div>
         </div>
       </div>
     </div>

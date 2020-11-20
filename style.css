@@ -6,6 +6,7 @@ Description: This is my original theme.
 Version: 1.1
 */
 @import url(assets/css/reset.css);
+@import url(//use.fontawesome.com/releases/v5.0.11/css/all.css);
 .mb10 {
   margin-bottom: 10px;
 }
@@ -199,6 +200,9 @@ a.wh,
   cursor: pointer;
   opacity: 0.8;
 }
+.float div img {
+  height: 20px;
+}
 @media screen and (min-width: 768px) {
   .float div {
     width: 100px;
@@ -206,7 +210,6 @@ a.wh,
   }
 }
 .float a {
-  padding: 12px;
   display: block;
   font-size: 1.8rem;
 }
@@ -237,11 +240,13 @@ a.wh,
     content: "応募";
   }
 }
-.float .fa {
+.float .fab,
+.float .fas {
   margin-right: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .float .fa {
+  .float .fab,
+  .float .fas {
     margin: 0;
     margin-top: 5px;
     display: block;
@@ -388,11 +393,12 @@ nav#g-nav.click {
 }
 #fv.bg-img {
   position: relative;
-  background-image: url(./assets/img/fv.jpg);
+  background-image: url(./assets/img/fv-sp.jpg);
   background-size: cover;
 }
 @media screen and (min-width: 768px) {
   #fv.bg-img {
+    background-image: url(./assets/img/fv.jpg);
     background-attachment: fixed;
   }
 }
@@ -625,8 +631,19 @@ nav#g-nav.click {
   width: 100%;
   margin-bottom: 30px;
   color: #1A242B;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
   /* --質問の＋アイコン */
   /* 答え */
+}
+#qa .cp_qa .cp_actab .box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #1A242B;
+  text-align: center;
+  font-size: 2.3rem;
+  width: 50px;
+  height: 45px;
 }
 #qa .cp_qa .cp_actab input {
   position: absolute;
@@ -642,6 +659,9 @@ nav#g-nav.click {
 #qa .cp_qa .cp_actab input:checked ~ label {
   color: #1A242B;
   border-radius: 0.5em 0.5em 0 0;
+}
+#qa .cp_qa .cp_actab input:checked ~ .box {
+  display: none;
 }
 #qa .cp_qa .cp_actab label {
   margin: 0 0 0 0;
@@ -666,11 +686,11 @@ nav#g-nav.click {
   color: #1A242B;
 }
 #qa .cp_qa .cp_actab label::after {
+  position: absolute;
   margin-left: 2rem;
   font-size: 1em;
   font-weight: bold;
   line-height: 1.4em;
-  content: '▼';
   display: inline-block;
   -webkit-transition: transform 0.5s;
   transition: transform 0.5s;

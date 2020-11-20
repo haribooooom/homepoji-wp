@@ -11,7 +11,7 @@
   <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
 
   <!--font-awasome-->
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+<!--  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -51,13 +51,17 @@
 
     <div class="float flex fix bold tcenter">
       <div class="tw-share">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false" class="wh"><i class="fa fa-twitter" aria-hidden="true" target="_blank"></i><span></span></a>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false" class="wh">
+<img src="<?php echo get_template_directory_uri(); ?>/assets/img/twitter.svg"><br>
+        <span></span></a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <!--share-->
       <div class="entry">
         <a href="https://forms.gle/AjiCE7jkt5GCjUDg6" class="wh" target="_blank">
-          <i class="fa fa-envelope"></i><span></span></a>
+<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mail.svg"><br>
+          <span></span>
+          </a>
       </div>
     </div>
     <!--float-->
