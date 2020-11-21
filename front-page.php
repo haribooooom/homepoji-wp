@@ -46,7 +46,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="wrap pc-flex">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/user.png" alt="">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/marmon.png" alt="">
               <div class="txt">
                 <p>初めまして！まーもんです。<br>
                   誰もがちょっと自分に自信がなくて、何かが変わるきっかけを探していると思います。新しい人と出会うことは怖いし、褒めることは恥ずかしい。でもそれが出来れば、確実に何かが変わるキッカケになると思います。
