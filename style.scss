@@ -561,7 +561,7 @@ nav#g-nav {
     img {
       width: 210px;
       margin-bottom: 30px;
-
+border-radius: 50%;
       @include mq-tablet {
         width: 25%;
       }
