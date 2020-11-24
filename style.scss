@@ -162,9 +162,7 @@ a.wh,
   font-size: 1.6rem;
   background-color: $main;
   color: $bl;
-
   box-shadow: 0 0 3px $c66;
-
   transition: 1s;
 
   @include mq-tablet {
@@ -191,7 +189,6 @@ a.wh,
 .float {
   z-index: 999;
   bottom: 0;
-
   box-shadow: 0 0 3px $c66;
 
   @include mq-tablet {
@@ -211,8 +208,9 @@ a.wh,
 
     img {
       height: 20px;
-        @include mq-tablet {
-      margin-top: 25px;
+
+      @include mq-tablet {
+        margin-top: 25px;
       }
     }
 
@@ -223,7 +221,6 @@ a.wh,
   }
 
   a {
-//    padding: 12px;
     display: block;
     font-size: 1.8rem;
 
@@ -267,8 +264,6 @@ a.wh,
       font-size: 3.5rem;
     }
   }
-
-
 }
 
 /*header-----------------------------------*/
@@ -276,8 +271,6 @@ a.wh,
   width: 100%;
   background-color: $main;
   height: 70px;
-  z-index: 999;
-
   box-shadow: 0 0 3px $c66;
 
   .h-wrap {
@@ -370,7 +363,6 @@ nav#g-nav {
 
     @include mq-tablet {
       flex-direction: row;
-      //      justify-content: space-between;
     }
   }
 
@@ -472,7 +464,7 @@ nav#g-nav {
 
     @include mq-tablet {
       width: 450px;
-    bottom: 25%;
+      bottom: 25%;
 
       p {
         font-size: 2rem;
@@ -561,7 +553,8 @@ nav#g-nav {
     img {
       width: 210px;
       margin-bottom: 30px;
-border-radius: 50%;
+      border-radius: 50%;
+
       @include mq-tablet {
         width: 25%;
       }
@@ -745,12 +738,10 @@ border-radius: 50%;
 
       &::after {
         position: absolute;
-        //        top: 0;
         margin-left: 2rem;
         font-size: 1em;
         font-weight: bold;
         line-height: 1.4em;
-        //        content: '▼';
         display: inline-block;
         -webkit-transition: transform 0.5s;
         transition: transform 0.5s;
